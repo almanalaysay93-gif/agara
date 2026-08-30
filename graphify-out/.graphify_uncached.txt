@@ -1,0 +1,90 @@
+E:\ai\claude\ALAi\agara-elevated-life\client\public\__manus__\debug-collector.js
+E:\ai\claude\ALAi\agara-elevated-life\client\src\App.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ErrorBoundary.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ManusDialog.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\Map.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\accordion.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\alert-dialog.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\alert.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\aspect-ratio.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\avatar.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\badge.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\breadcrumb.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\button-group.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\button.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\calendar.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\card.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\carousel.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\chart.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\checkbox.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\collapsible.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\command.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\context-menu.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\dialog.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\drawer.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\dropdown-menu.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\empty.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\field.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\form.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\hover-card.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\input-group.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\input-otp.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\input.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\item.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\kbd.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\label.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\menubar.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\navigation-menu.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\pagination.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\popover.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\progress.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\radio-group.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\resizable.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\scroll-area.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\select.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\separator.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\sheet.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\sidebar.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\skeleton.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\slider.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\sonner.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\spinner.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\switch.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\table.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\tabs.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\textarea.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\toggle-group.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\toggle.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\components\ui\tooltip.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\const.ts
+E:\ai\claude\ALAi\agara-elevated-life\client\src\contexts\ThemeContext.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\hooks\useComposition.ts
+E:\ai\claude\ALAi\agara-elevated-life\client\src\hooks\useMobile.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\hooks\usePersistFn.ts
+E:\ai\claude\ALAi\agara-elevated-life\client\src\lib\utils.ts
+E:\ai\claude\ALAi\agara-elevated-life\client\src\main.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\pages\Home.tsx
+E:\ai\claude\ALAi\agara-elevated-life\client\src\pages\NotFound.tsx
+E:\ai\claude\ALAi\agara-elevated-life\components.json
+E:\ai\claude\ALAi\agara-elevated-life\package.json
+E:\ai\claude\ALAi\agara-elevated-life\server\index.ts
+E:\ai\claude\ALAi\agara-elevated-life\shared\const.ts
+E:\ai\claude\ALAi\agara-elevated-life\template.json
+E:\ai\claude\ALAi\agara-elevated-life\tsconfig.json
+E:\ai\claude\ALAi\agara-elevated-life\tsconfig.node.json
+E:\ai\claude\ALAi\agara-elevated-life\vite.config.ts
+E:\ai\claude\ALAi\agara-elevated-life\agara_product_research.md
+E:\ai\claude\ALAi\agara-elevated-life\client\index.html
+E:\ai\claude\ALAi\agara-elevated-life\drive_inventory.md
+E:\ai\claude\ALAi\agara-elevated-life\ideas.md
+E:\ai\claude\ALAi\agara-elevated-life\todo.md
+E:\ai\claude\ALAi\agara-elevated-life\images and vids\image and vids\file_00000000153c81faaf379f47e7226314.png
+E:\ai\claude\ALAi\agara-elevated-life\images and vids\image and vids\file_000000006ba881fa91f6cbde8e87f99d.png
+E:\ai\claude\ALAi\agara-elevated-life\images and vids\image and vids\file_00000000fae4820b8968c352a1346cc6.png
+E:\ai\claude\ALAi\agara-elevated-life\images and vids\image and vids\images (1).jpeg
+E:\ai\claude\ALAi\agara-elevated-life\images and vids\image and vids\images (2).jpeg
+E:\ai\claude\ALAi\agara-elevated-life\images and vids\image and vids\images (3).jpeg
+E:\ai\claude\ALAi\agara-elevated-life\images and vids\image and vids\images.jpeg
+E:\ai\claude\ALAi\agara-elevated-life\images and vids\image and vids\gemini_generated_video_7de79e44.mp4
+E:\ai\claude\ALAi\agara-elevated-life\images and vids\image and vids\gemini_generated_video_bfe3a1ca.mp4
+E:\ai\claude\ALAi\agara-elevated-life\images and vids\image and vids\gemini_generated_video_d55cb854.mp4

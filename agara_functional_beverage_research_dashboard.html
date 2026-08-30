@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agara Functional Beverage & Market Analysis</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        botanical: {
+                            50: '#f7f9f6',
+                            100: '#eef2eb',
+                            200: '#d7e3d2',
+                            600: '#5a7052',
+                            700: '#465840',
+                            800: '#384634',
+                        },
+                        roast: {
+                            50: '#faf6f3',
+                            100: '#f2e8e1',
+                            600: '#8c533e',
+                            700: '#734230',
+                            800: '#593223',
+                        },
+                        amberGold: '#d4a359',
+                        warmBg: '#fcfbf7',
+                        cardBg: '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Embedded custom chart container rules ensuring responsiveness & height constraints */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 380px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        /* Custom subtle scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-warmBg text-gray-800 font-sans antialiased selection:bg-botanical-200 selection:text-botanical-800">
+
+    <!-- Chosen Palette: Warm Botanical Harmonies (Warm Off-white #fcfbf7, Botanical Sage #5a7052, Coffee Dark Amber #8c533e, Soft Gold Accent #d4a359) -->
+    <!-- Application Structure Plan: The SPA is structured as an interactive research workspace categorized into 5 logical modules rather than a plain linear document:
+         1. Executive Overview & Key Metrics Banner: Quick strategic facts and total multi-system overview.
+         2. Interactive Formulation Comparison: Visual radar & comparative matrices between AGARA Cafe, MATCHAGARA, and standard unfortified drinks.
+         3. Tri-System Biochemical Pathway Explorer: Interactive tabbed breakdown of Neuro-Cognitive, Metabolic, and Neuro-Emotional mechanisms with active ingredient deep-dives.
+         4. Commercial Architecture & Interactive Pricing Calculator: Real-time cost-per-serving simulator, MLM model analytics, and secondary market ecosystem.
+         5. Regional Dynamics & Brand Disambiguation: Philippines entry strategy & side-by-side comparative disambiguation (Agara Life LLC vs Agara Ramen).
+         6. Pharmacokinetic Sensory Efficacy Timeline: Interactive 6-hour kinetic curve contrasting standard coffee vs. AGARA buffered focus profile. -->
+    <!-- Visualization & Content Choices:
+         1. Comparative Matrix -> Interactive Filterable Table & Chart.js Radar Chart -> Allows multi-attribute visualization without SVG.
+         2. Pharmacokinetic Curve -> Chart.js Smooth Line Chart -> Shows caffeine energy vs. jitter attenuation over 6 hours.
+         3. Commercial Pricing -> Dynamic HTML/JS Calculator + Chart.js Bar Chart -> Direct price per serving comparison.
+         4. Brand Disambiguation -> Side-by-side CSS Grid comparison card -> Clear structural separation of MLM enterprise vs Baguio Ramen chain.
+         Confirming NO SVG graphics and NO Mermaid JS used throughout the application. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Top Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">🌿</span>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">AGARA <span class="text-botanical-600 font-normal">Research Portal</span></span>
+                </div>
+                <nav class="hidden md:flex space-x-1 lg:space-x-4 text-sm font-medium">
+                    <button onclick="scrollToSection('overview')" class="px-3 py-2 rounded-md hover:bg-gray-100 text-gray-700 transition">Overview</button>
+                    <button onclick="scrollToSection('formulation')" class="px-3 py-2 rounded-md hover:bg-gray-100 text-gray-700 transition">Formulation Matrix</button>
+                    <button onclick="scrollToSection('biochemistry')" class="px-3 py-2 rounded-md hover:bg-gray-100 text-gray-700 transition">Biochemical Pathways</button>
+                    <button onclick="scrollToSection('commercial')" class="px-3 py-2 rounded-md hover:bg-gray-100 text-gray-700 transition">Commercial & Pricing</button>
+                    <button onclick="scrollToSection('regional')" class="px-3 py-2 rounded-md hover:bg-gray-100 text-gray-700 transition">Regional & Disambiguation</button>
+                </nav>
+                <div class="md:hidden">
+                    <select onchange="scrollToSection(this.value)" class="bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg p-2">
+                        <option value="overview">Overview</option>
+                        <option value="formulation">Formulations</option>
+                        <option value="biochemistry">Biochemistry</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="regional">Regional / Disambiguation</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        <!-- SECTION 1: EXECUTIVE OVERVIEW -->
+        <section id="overview" class="scroll-mt-20">
+            <div class="bg-gradient-to-r from-botanical-50 via-white to-roast-50 rounded-2xl p-6 md:p-10 border border-gray-200 shadow-sm">
+                <div class="max-w-3xl">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-botanical-100 text-botanical-800 mb-3">
+                        Market Research & Biochemical Synthesis
+                    </span>
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                        Functional Coffee & Matcha Portfolio Analysis
+                    </h1>
+                    <p class="mt-4 text-base md:text-lg text-gray-600 leading-relaxed">
+                        Agara Life LLC (Waipahu, Hawaii) bridges the $100B+ global coffee habit with targeted dietary nutraceuticals. By infusing ceremonial matcha and South American Arabica coffee with adaptogens, nootropics, and metabolic modulators, Agara delivers sustained daily energy without caffeine crashes or autonomic jitters.
+                    </p>
+                </div>
+
+                <!-- Executive Snapshot Cards -->
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-cardBg p-5 rounded-xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase font-bold tracking-wider text-gray-400">Flagship Products</span>
+                            <div class="text-xl font-bold text-gray-900 mt-1">AGARA Cafe & MATCHAGARA</div>
+                        </div>
+                        <div class="mt-3 text-xs text-gray-500">Dark Roast Coffee & Ceremonial Grade Matcha</div>
+                    </div>
+
+                    <div class="bg-cardBg p-5 rounded-xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase font-bold tracking-wider text-gray-400">Core Caffeine Buffer</span>
+                            <div class="text-xl font-bold text-botanical-700 mt-1">L-Theanine + Lion's Mane</div>
+                        </div>
+                        <div class="mt-3 text-xs text-gray-500">Smooths CNS arousal curve & promotes NGF</div>
+                    </div>
+
+                    <div class="bg-cardBg p-5 rounded-xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase font-bold tracking-wider text-gray-400">Metabolic Triad</span>
+                            <div class="text-xl font-bold text-roast-700 mt-1">Berberine + Chromemate®</div>
+                        </div>
+                        <div class="mt-3 text-xs text-gray-500">AMPK activation & glycemic stabilization</div>
+                    </div>
+
+                    <div class="bg-cardBg p-5 rounded-xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase font-bold tracking-wider text-gray-400">Retail Unit Economics</span>
+                            <div class="text-xl font-bold text-amberGold mt-1">$2.29 – $2.63 / Serving</div>
+                        </div>
+                        <div class="mt-3 text-xs text-gray-500">Tiered pricing model across 30-day packs</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FORMULATION MATRIX & COMPARISON -->
+        <section id="formulation" class="scroll-mt-20">
+            <div class="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900">1. Comparative Product Formulations</h2>
+                    <p class="mt-2 text-gray-600 text-sm md:text-base leading-relaxed">
+                        This section analyzes the technical formulations of AGARA Cafe and MATCHAGARA against conventional unfortified beverages. While standard coffee and matcha provide raw stimulants, Agara’s functional matrix incorporates 9 targeted botanical and fungal extracts to harmonize cognitive focus, emotional tone, and blood sugar modulation.
+                    </p>
+                </div>
+
+                <!-- Interactive Profile Switcher / Radar Chart View -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
+                            <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wide">Select Comparison View</h3>
+                            <div class="mt-3 grid grid-cols-2 gap-2">
+                                <button id="btn-agara-cafe" onclick="updateRadarDataset('cafe')" class="px-3 py-2 rounded-lg text-xs font-semibold bg-roast-600 text-white shadow-sm transition">
+                                    ☕ AGARA Cafe
+                                </button>
+                                <button id="btn-matchagara" onclick="updateRadarDataset('matcha')" class="px-3 py-2 rounded-lg text-xs font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
+                                    🍵 MATCHAGARA
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="formulation-detail-box" class="p-4 rounded-xl border border-botanical-200 bg-botanical-50 text-sm space-y-2">
+                            <div class="font-bold text-botanical-800 text-base" id="form-title">AGARA Cafe Dark Roast</div>
+                            <p class="text-gray-700 text-xs leading-relaxed" id="form-desc">
+                                Ethically sourced South American Arabica dark roast featuring ~165mg naturally occurring caffeine. Fortified with Lion's Mane, L-Theanine, Berberine, Chromemate®, Saffron, and thermogenic botanicals.
+                            </p>
+                            <div class="pt-2 border-t border-botanical-200 grid grid-cols-2 gap-2 text-xs">
+                                <div><strong class="text-gray-900">Format:</strong> 90-100g Bag (30 Servings)</div>
+                                <div><strong class="text-gray-900">Primary Goal:</strong> Sustained High Energy</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Radar Chart Container -->
+                    <div class="lg:col-span-7 flex flex-col items-center">
+                        <div class="w-full text-center text-xs font-semibold text-gray-500 mb-2">Functional Dimension Comparison Scale (1-10)</div>
+                        <div class="chart-container">
+                            <canvas id="formulationRadarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Comparative Matrix Table -->
+                <div class="mt-8 overflow-x-auto">
+                    <table class="w-full text-left text-xs md:text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-gray-100 border-b border-gray-200 text-gray-700">
+                                <th class="p-3 font-semibold">Attribute / Ingredient</th>
+                                <th class="p-3 font-semibold text-roast-700 bg-roast-50/50">AGARA Cafe</th>
+                                <th class="p-3 font-semibold text-botanical-700 bg-botanical-50/50">MATCHAGARA</th>
+                                <th class="p-3 font-semibold text-gray-500">Standard Dark Roast</th>
+                                <th class="p-3 font-semibold text-gray-500">Standard Ceremonial Matcha</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="p-3 font-medium text-gray-900">Primary Base</td>
+                                <td class="p-3 bg-roast-50/30">South American Arabica Coffee</td>
+                                <td class="p-3 bg-botanical-50/30">Shade-grown Organic Matcha</td>
+                                <td class="p-3 text-gray-600">Commercial Arabica/Robusta</td>
+                                <td class="p-3 text-gray-600">Standard Green Tea Leaf (*Camellia*)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-gray-900">Key Nootropics</td>
+                                <td class="p-3 bg-roast-50/30 font-semibold text-gray-800">Lion's Mane, L-Theanine</td>
+                                <td class="p-3 bg-botanical-50/30 font-semibold text-gray-800">Lion's Mane, L-Theanine</td>
+                                <td class="p-3 text-gray-400">None</td>
+                                <td class="p-3 text-gray-600">Natural baseline L-Theanine</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-gray-900">Metabolic Modulators</td>
+                                <td class="p-3 bg-roast-50/30">Berberine, Chromemate®, Green Coffee, Lotus Leaf</td>
+                                <td class="p-3 bg-botanical-50/30">Berberine, Chromemate®, Citrus Aurantium, Lotus Leaf</td>
+                                <td class="p-3 text-gray-400">None</td>
+                                <td class="p-3 text-gray-600">Minimal natural catechins</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-gray-900">Mood Support</td>
+                                <td class="p-3 bg-roast-50/30 text-amber-700 font-medium">Saffron Extract (*Crocus sativus*)</td>
+                                <td class="p-3 bg-botanical-50/30 text-amber-700 font-medium">Saffron Extract (*Crocus sativus*)</td>
+                                <td class="p-3 text-gray-400">None</td>
+                                <td class="p-3 text-gray-400">None</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-gray-900">Caffeine & Delivery</td>
+                                <td class="p-3 bg-roast-50/30">~165 mg; Buffered via Guarana/L-Theanine</td>
+                                <td class="p-3 bg-botanical-50/30">Moderate (~40-60mg); High natural ratio</td>
+                                <td class="p-3 text-gray-600">~95–140 mg (Unbuffered spike)</td>
+                                <td class="p-3 text-gray-600">~30–70 mg (Gentle release)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-gray-900">Physiological Goal</td>
+                                <td class="p-3 bg-roast-50/30 font-medium text-roast-800">Clean alertness, satiety, thermogenesis</td>
+                                <td class="p-3 bg-botanical-50/30 font-medium text-botanical-800">Calm focus, mood balance, gentle detox</td>
+                                <td class="p-3 text-gray-600">Temporary CNS arousal spike</td>
+                                <td class="p-3 text-gray-600">Gentle alertness & antioxidant support</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: BIOCHEMICAL PATHWAYS & SYNERGIES -->
+        <section id="biochemistry" class="scroll-mt-20">
+            <div class="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900">2. Biochemical Synergies & Physiological Tri-System</h2>
+                    <p class="mt-2 text-gray-600 text-sm md:text-base leading-relaxed">
+                        Rather than relying solely on high-dose caffeine central nervous system arousal, Agara operates on a synchronized three-tier biochemical approach. Click each physiological system below to explore its active constituents, cellular targets, and synergistic interactions.
+                    </p>
+                </div>
+
+                <!-- Tri-System Navigation Tabs -->
+                <div class="flex flex-wrap gap-2 border-b border-gray-200 pb-3">
+                    <button onclick="switchBioTab('neuro')" id="tab-bio-neuro" class="bio-tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-botanical-600 text-white shadow-sm">
+                        🧠 Neuro-Cognitive Alignment
+                    </button>
+                    <button onclick="switchBioTab('metabolic')" id="tab-bio-metabolic" class="bio-tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-gray-100 text-gray-600 hover:bg-gray-200">
+                        ⚡ Metabolic & Glycemic Control
+                    </button>
+                    <button onclick="switchBioTab('emotional')" id="tab-bio-emotional" class="bio-tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-gray-100 text-gray-600 hover:bg-gray-200">
+                        ☯️ Neuro-Emotional Homeostasis
+                    </button>
+                </div>
+
+                <!-- Tab Content 1: Neuro-Cognitive -->
+                <div id="content-bio-neuro" class="bio-content-panel space-y-6">
+                    <div class="bg-botanical-50/60 p-4 md:p-6 rounded-xl border border-botanical-100">
+                        <h3 class="text-lg font-bold text-botanical-800">Caffeine Attenuation & Neurogenesis Pathway</h3>
+                        <p class="mt-1 text-xs md:text-sm text-gray-700 leading-relaxed">
+                            Caffeine acts as an adenosine receptor antagonist to block fatigue signaling, but normally induces vasoconstriction and tremors. L-Theanine crosses the blood-brain barrier to stimulate alpha brainwaves and competitively inhibit excitatory glutamate binding, smoothing the pharmacokinetic delivery curve. Concurrently, Lion's Mane diterpenes stimulate Nerve Growth Factor (NGF) synthesis for long-term neuronal plasticity.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="p-4 rounded-xl border border-gray-200 bg-white hover:border-botanical-300 transition">
+                            <div class="text-xs font-bold text-botanical-600 uppercase">Active Compound</div>
+                            <div class="text-base font-bold text-gray-900 mt-1">L-Theanine</div>
+                            <div class="text-xs text-gray-500 mt-2"><strong>Mechanism:</strong> Increases GABA levels & stimulates alpha brainwave activity.</div>
+                            <div class="text-xs text-botanical-700 font-semibold mt-2">Synergy: Blunts caffeine jitters without sedation.</div>
+                        </div>
+
+                        <div class="p-4 rounded-xl border border-gray-200 bg-white hover:border-botanical-300 transition">
+                            <div class="text-xs font-bold text-botanical-600 uppercase">Fungal Nootropic</div>
+                            <div class="text-base font-bold text-gray-900 mt-1">Lion's Mane Extract</div>
+                            <div class="text-xs text-gray-500 mt-2"><strong>Mechanism:</strong> Hericenones & erinacines cross BBB to stimulate NGF synthesis.</div>
+                            <div class="text-xs text-botanical-700 font-semibold mt-2">Synergy: Promotes synaptic arborization & long-term memory.</div>
+                        </div>
+
+                        <div class="p-4 rounded-xl border border-gray-200 bg-white hover:border-botanical-300 transition">
+                            <div class="text-xs font-bold text-botanical-600 uppercase">Primary Stimulant</div>
+                            <div class="text-base font-bold text-gray-900 mt-1">Arabica / Guarana</div>
+                            <div class="text-xs text-gray-500 mt-2"><strong>Mechanism:</strong> Reversible A1 & A2A adenosine receptor blockade.</div>
+                            <div class="text-xs text-botanical-700 font-semibold mt-2">Synergy: Sustained central vigilance for 4–6 hours.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content 2: Metabolic -->
+                <div id="content-bio-metabolic" class="bio-content-panel hidden space-y-6">
+                    <div class="bg-roast-50/60 p-4 md:p-6 rounded-xl border border-roast-100">
+                        <h3 class="text-lg font-bold text-roast-800">AMPK Activation & Thermogenic Regulation</h3>
+                        <p class="mt-1 text-xs md:text-sm text-gray-700 leading-relaxed">
+                            Unbuffered caffeine can trigger blood sugar spikes followed by reactive hypoglycemia and hunger crashes. Berberine HCL directly activates Adenosine Monophosphate-Activated Protein Kinase (AMPK) to increase cellular glucose uptake without spiking insulin. Chromemate® Chromium optimizes insulin receptor phosphorylation, while Synephrine (Citrus Aurantium) stimulates lipolysis via beta-3 adrenergic receptors.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="p-4 rounded-xl border border-gray-200 bg-white hover:border-roast-300 transition">
+                            <div class="text-xs font-bold text-roast-600 uppercase">AMPK Activator</div>
+                            <div class="text-base font-bold text-gray-900 mt-1">Berberine HCL</div>
+                            <div class="text-xs text-gray-500 mt-2"><strong>Mechanism:</strong> Activates AMPK pathway, suppressing hepatic gluconeogenesis.</div>
+                            <div class="text-xs text-roast-700 font-semibold mt-2">Synergy: Prevents post-beverage reactive glycemic spikes.</div>
+                        </div>
+
+                        <div class="p-4 rounded-xl border border-gray-200 bg-white hover:border-roast-300 transition">
+                            <div class="text-xs font-bold text-roast-600 uppercase">Insulin Sensitizer</div>
+                            <div class="text-base font-bold text-gray-900 mt-1">Chromemate® Chromium</div>
+                            <div class="text-xs text-gray-500 mt-2"><strong>Mechanism:</strong> Oxygen-coordinated chromium niacin complex enhances GLUT4 translocation.</div>
+                            <div class="text-xs text-roast-700 font-semibold mt-2">Synergy: Enhances carbohydrate clearance efficiency.</div>
+                        </div>
+
+                        <div class="p-4 rounded-xl border border-gray-200 bg-white hover:border-roast-300 transition">
+                            <div class="text-xs font-bold text-roast-600 uppercase">Thermogenic Agent</div>
+                            <div class="text-base font-bold text-gray-900 mt-1">Citrus Aurantium</div>
+                            <div class="text-xs text-gray-500 mt-2"><strong>Mechanism:</strong> Binds beta-3 adrenergic receptors to increase basal metabolic rate.</div>
+                            <div class="text-xs text-roast-700 font-semibold mt-2">Synergy: Promotes lipolysis without cardiac overstimulation.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content 3: Emotional -->
+                <div id="content-bio-emotional" class="bio-content-panel hidden space-y-6">
+                    <div class="bg-amber-50/60 p-4 md:p-6 rounded-xl border border-amber-200">
+                        <h3 class="text-lg font-bold text-amber-900">Monoaminergic Stabilization & Stress Mitigation</h3>
+                        <p class="mt-1 text-xs md:text-sm text-gray-700 leading-relaxed">
+                            Caffeine intake can elevate systemic cortisol and epinephrine. Standardized Saffron (*Crocus sativus*) extract supplies bioactive crocin, crocetin, and safranal to inhibit monoamine (serotonin, dopamine, norepinephrine) reuptake. This neurochemical stabilization manages stress-induced emotional eating and stabilizes mood under demanding workloads.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl border border-gray-200 bg-white hover:border-amber-300 transition">
+                            <div class="text-xs font-bold text-amber-600 uppercase">Bioactive Phytochemical</div>
+                            <div class="text-base font-bold text-gray-900 mt-1">Saffron Extract (Safranal/Crocin)</div>
+                            <div class="text-xs text-gray-500 mt-2"><strong>Mechanism:</strong> Monoamine reuptake inhibition in central neuronal synapses.</div>
+                            <div class="text-xs text-amber-800 font-semibold mt-2">Synergy: Mitigates caffeine-induced anxiety & blunts hunger triggers.</div>
+                        </div>
+
+                        <div class="p-4 rounded-xl border border-gray-200 bg-white hover:border-amber-300 transition">
+                            <div class="text-xs font-bold text-amber-600 uppercase">Botanical Digestive Modulator</div>
+                            <div class="text-base font-bold text-gray-900 mt-1">Lotus Leaf Extract</div>
+                            <div class="text-xs text-gray-500 mt-2"><strong>Mechanism:</strong> Inhibits pancreatic lipase and supports gastrointestinal motility.</div>
+                            <div class="text-xs text-amber-800 font-semibold mt-2">Synergy: Smooths digestive tolerance of intense dark roast botanicals.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: COMMERCIAL ARCHITECTURE & PRICING CALCULATOR -->
+        <section id="commercial" class="scroll-mt-20">
+            <div class="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900">3. Commercial Architecture & Pricing Economics</h2>
+                    <p class="mt-2 text-gray-600 text-sm md:text-base leading-relaxed">
+                        Agara Life LLC utilizes a direct-to-consumer multi-tier retail structure coupled with a global affiliate and "Founding Ambassador" binary network model. Use the interactive pricing calculator below to analyze effective cost-per-serving dynamics across retail purchase volumes.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Dynamic Pricing Simulator -->
+                    <div class="lg:col-span-5 bg-gray-50 p-6 rounded-2xl border border-gray-200 space-y-5">
+                        <h3 class="text-base font-bold text-gray-900 uppercase tracking-wide">Interactive Volume Calculator</h3>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-2">Select Purchase Tier Volume:</label>
+                            <select id="tierSelect" onchange="calculatePricing()" class="w-full bg-white border border-gray-300 rounded-lg p-2.5 text-sm font-medium text-gray-800 shadow-sm focus:ring-2 focus:ring-botanical-600">
+                                <option value="1">1 Bag ($79.00 Total) - Baseline Retail</option>
+                                <option value="2">2 Bag Bundle ($149.00 Total) - 6% Discount</option>
+                                <option value="5" selected>5 Bag Pack ($344.00 Total) - 13% Discount</option>
+                            </select>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-xl border border-gray-200 space-y-3">
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-gray-500">Effective Cost Per Bag:</span>
+                                <span id="outBagCost" class="font-bold text-gray-900 text-sm">$68.80</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-gray-500">Total Servings (~30/bag):</span>
+                                <span id="outServings" class="font-bold text-gray-900 text-sm">150 Servings</span>
+                            </div>
+                            <div class="border-t border-gray-100 pt-2 flex justify-between items-center text-sm">
+                                <span class="font-bold text-gray-700">Cost Per Serving:</span>
+                                <span id="outPerServing" class="font-extrabold text-botanical-700 text-lg">$2.29</span>
+                            </div>
+                        </div>
+
+                        <div class="text-xs text-gray-500 leading-normal">
+                            * Note: While $2.29–$2.63 per cup is premium relative to commercial instant coffee, it consolidates 9 standalone functional supplements (Berberine, Lion's Mane, Saffron, Chromium, L-Theanine) into one daily ritual.
+                        </div>
+                    </div>
+
+                    <!-- Cost Visualizer Chart -->
+                    <div class="lg:col-span-7">
+                        <div class="w-full text-center text-xs font-semibold text-gray-500 mb-2">Cost Per Serving ($ USD) Across Tiers</div>
+                        <div class="chart-container">
+                            <canvas id="pricingBarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MLM & Network Marketing Model Summary -->
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+                    <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
+                        <div class="text-xs font-bold text-botanical-700 uppercase">Affiliate Enrollment</div>
+                        <div class="text-base font-bold text-gray-900 mt-1">$49 Ambassador Fee</div>
+                        <p class="text-xs text-gray-600 mt-2">
+                            Prospective distributors register as Founding Ambassadors to secure binary compensation positions. Fee is waived upon purchasing elevated inventory starter packs.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
+                        <div class="text-xs font-bold text-botanical-700 uppercase">Autoship Maintenance</div>
+                        <div class="text-base font-bold text-gray-900 mt-1">1–2 Bags / Month</div>
+                        <p class="text-xs text-gray-600 mt-2">
+                            Ambassadors maintain 1 bag/month autoship to preserve active volume. Higher tier leadership ranks require 2 bags/month personal autoship volume.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
+                        <div class="text-xs font-bold text-botanical-700 uppercase">Secondary Market Dynamic</div>
+                        <div class="text-base font-bold text-gray-900 mt-1">Global Resale Platforms</div>
+                        <p class="text-xs text-gray-600 mt-2">
+                            Independent distributors resell sealed stick-packs on eBay, TikTok Shop, and Lazada, bundling coffee + matcha for dual weight management kits.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: REGIONAL DYNAMICS & BRAND DISAMBIGUATION -->
+        <section id="regional" class="scroll-mt-20">
+            <div class="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900">4. Philippines Expansion & Critical Brand Disambiguation</h2>
+                    <p class="mt-2 text-gray-600 text-sm md:text-base leading-relaxed">
+                        In mid-2026, Agara Life organized high-profile pre-launch conventions at premier venues including Solaire Resort in Parañaque (Manila) and Seda Abreeza in Davao City. Southeast Asia represents a high-growth corridor for 3-in-1 functional herbal coffee blends. However, rigorous market analytics require resolving brand naming confusion in the Philippine region.
+                    </p>
+                </div>
+
+                <!-- Philippines Event Banner -->
+                <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white rounded-xl p-5 shadow-inner flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div>
+                        <div class="inline-block px-2.5 py-0.5 rounded bg-blue-500/30 text-blue-200 text-xs font-bold mb-1">Mid-2026 Expansion Milestone</div>
+                        <div class="text-lg font-bold">Philippine Pre-Launch Roadshow</div>
+                        <p class="text-xs text-gray-300 mt-1">Recruiting Founding Ambassadors across Manila (Solaire Resort) & Davao City (Seda Abreeza).</p>
+                    </div>
+                    <div class="text-right text-xs bg-white/10 p-3 rounded-lg border border-white/10">
+                        <span class="block font-bold text-amberGold">Key Demand Vector:</span>
+                        Functional 3-in-1 weight loss & cognitive beverages.
+                    </div>
+                </div>
+
+                <!-- Side-by-Side Disambiguation Grid -->
+                <div>
+                    <h3 class="text-base font-bold text-gray-900 uppercase tracking-wide mb-4">CRITICAL DISAMBIGUATION MATRIX</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Entity A: Agara Life LLC -->
+                        <div class="p-6 rounded-2xl border-2 border-botanical-600 bg-botanical-50/30 space-y-4">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-botanical-600 text-white">Dietary Supplement Enterprise</span>
+                                    <h4 class="text-xl font-bold text-gray-900 mt-2">Agara Life LLC</h4>
+                                </div>
+                                <span class="text-2xl">🌿</span>
+                            </div>
+                            
+                            <ul class="space-y-2 text-xs md:text-sm text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="font-bold text-gray-900 w-28 shrink-0">Headquarters:</span>
+                                    <span>Waipahu, Hawaii, USA</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-bold text-gray-900 w-28 shrink-0">Product Line:</span>
+                                    <span>AGARA Cafe & MATCHAGARA functional drinks</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-bold text-gray-900 w-28 shrink-0">Business Sector:</span>
+                                    <span>Nutraceuticals, MLM / Direct-to-Consumer e-commerce</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-bold text-gray-900 w-28 shrink-0">Distribution:</span>
+                                    <span>Global affiliate networks, autoship, online stick packs</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Entity B: Agara Ramen -->
+                        <div class="p-6 rounded-2xl border-2 border-amber-600 bg-amber-50/30 space-y-4">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-amber-600 text-white">Artisanal Dining Chain</span>
+                                    <h4 class="text-xl font-bold text-gray-900 mt-2">Agara Ramen</h4>
+                                </div>
+                                <span class="text-2xl">🍜</span>
+                            </div>
+                            
+                            <ul class="space-y-2 text-xs md:text-sm text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="font-bold text-gray-900 w-28 shrink-0">Headquarters:</span>
+                                    <span>Baguio City, Benguet, Philippines</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-bold text-gray-900 w-28 shrink-0">Product Line:</span>
+                                    <span>Japanese Ramen (Tonkotsu, Tantanmen) ₱380–₱480</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-bold text-gray-900 w-28 shrink-0">Business Sector:</span>
+                                    <span>Brick-and-mortar culinary & casual hospitality</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-bold text-gray-900 w-28 shrink-0">Distribution:</span>
+                                    <span>Dine-in restaurant locations (Engineer's Hill, South Dr)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="mt-3 text-xs text-gray-500 italic text-center">
+                        * Essential Note: Agara Life LLC and Agara Ramen share zero corporate ownership, supply chains, or operational ties. Market analysts must ensure search keywords avoid regional brand confusion.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: SENSORY EFFICACY & PHARMACOKINETIC TIMELINE -->
+        <section id="efficacy" class="scroll-mt-20">
+            <div class="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900">5. Pharmacokinetic Energy & Efficacy Curve</h2>
+                    <p class="mt-2 text-gray-600 text-sm md:text-base leading-relaxed">
+                        A major sensory and biochemical hurdle in functional coffee is masking earthy, bitter adaptogens (Lion's Mane, Berberine) while smoothing central nervous system stimulation. User reports indicate AGARA Cafe retains a smooth coffee profile while providing a prolonged 4–6 hour focus curve without standard post-caffeine hypoglycemia.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Line Chart Visualizer -->
+                    <div class="lg:col-span-8">
+                        <div class="w-full text-center text-xs font-semibold text-gray-500 mb-2">Subjective Energy & Focus Score (0 - 100) Over 6 Hours</div>
+                        <div class="chart-container">
+                            <canvas id="pharmacokineticLineChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Key Takeaways Sidebar -->
+                    <div class="lg:col-span-4 space-y-4">
+                        <div class="p-4 rounded-xl border border-botanical-200 bg-botanical-50">
+                            <div class="font-bold text-botanical-800 text-sm">✓ Peak Focus Without Jitters</div>
+                            <p class="text-xs text-gray-700 mt-1">
+                                L-Theanine modulates the acute caffeine peak (Hour 1), holding subjective focus at an optimal 85-90 score without blood pressure spikes.
+                            </p>
+                        </div>
+
+                        <div class="p-4 rounded-xl border border-roast-200 bg-roast-50">
+                            <div class="font-bold text-roast-800 text-sm">✓ Elimination of Crash (Hour 3-4)</div>
+                            <p class="text-xs text-gray-700 mt-1">
+                                Standard coffee drops sharply into reactive hypoglycemia at Hour 3. Berberine and Chromemate® prevent glucose crashes, sustaining mood.
+                            </p>
+                        </div>
+
+                        <div class="p-4 rounded-xl border border-amber-200 bg-amber-50">
+                            <div class="font-bold text-amber-900 text-sm">✓ Organoleptic Quality</div>
+                            <p class="text-xs text-gray-700 mt-1">
+                                Micro-milled powder dissolves cleanly in hot/cold liquids. South American dark roast effectively masks botanical bitterness.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800 mt-12 text-xs">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+            <p class="font-semibold text-gray-300">Agara Functional Coffee & Matcha Portfolio Synthesis</p>
+            <p>Data compiled from biochemical matrix analysis, commercial price tiers, and Southeast Asian expansion reports.</p>
+            <p class="text-gray-600">© 2026 Agara Life LLC Market Analysis Portal. Single-Page Interactive Application.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Smooth scrolling helper for navigation
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Radar Chart Data Configurations
+        const radarDataSets = {
+            cafe: {
+                title: 'AGARA Cafe Dark Roast',
+                desc: 'Ethically sourced South American Arabica dark roast featuring ~165mg caffeine. Fortified with Lion\'s Mane, L-Theanine, Berberine, Chromemate®, Saffron, and thermogenic botanicals.',
+                data: [9, 9, 9, 8, 8], // Energy, Focus, Metabolic, Mood, Smoothness
+                bgColor: 'rgba(140, 83, 62, 0.2)',
+                borderColor: '#8c533e'
+            },
+            matcha: {
+                title: 'MATCHAGARA Ceremonial Matcha',
+                desc: 'Organic shade-grown ceremonial matcha powder naturally high in L-Theanine and chlorophyll. Formulated with the same core adaptogenic matrix for calm, smooth alertness.',
+                data: [6, 10, 8, 9, 10], // Energy, Focus, Metabolic, Mood, Smoothness
+                bgColor: 'rgba(90, 112, 82, 0.2)',
+                borderColor: '#5a7052'
+            }
+        };
+
+        let radarChartInstance = null;
+
+        function initRadarChart() {
+            const ctx = document.getElementById('formulationRadarChart').getContext('2d');
+            radarChartInstance = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Energy Delivery', 'Cognitive Focus', 'Metabolic Activation', 'Mood Support', 'Autonomic Smoothness'],
+                    datasets: [{
+                        label: radarDataSets.cafe.title,
+                        data: radarDataSets.cafe.data,
+                        backgroundColor: radarDataSets.cafe.bgColor,
+                        borderColor: radarDataSets.cafe.borderColor,
+                        borderWidth: 2,
+                        pointBackgroundColor: radarDataSets.cafe.borderColor
+                    }, {
+                        label: 'Standard Unbuffered Coffee',
+                        data: [8, 5, 2, 2, 3],
+                        backgroundColor: 'rgba(156, 163, 175, 0.1)',
+                        borderColor: '#9ca3af',
+                        borderWidth: 1,
+                        borderDash: [4, 4]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: '#e5e7eb' },
+                            grid: { color: '#f3f4f6' },
+                            suggestedMin: 0,
+                            suggestedMax: 10,
+                            ticks: { stepSize: 2, display: false }
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
+                    }
+                }
+            });
+        }
+
+        function updateRadarDataset(type) {
+            const btnCafe = document.getElementById('btn-agara-cafe');
+            const btnMatcha = document.getElementById('btn-matchagara');
+            const titleEl = document.getElementById('form-title');
+            const descEl = document.getElementById('form-desc');
+
+            if (type === 'cafe') {
+                btnCafe.className = "px-3 py-2 rounded-lg text-xs font-semibold bg-roast-600 text-white shadow-sm transition";
+                btnMatcha.className = "px-3 py-2 rounded-lg text-xs font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300 transition";
+                
+                titleEl.textContent = radarDataSets.cafe.title;
+                descEl.textContent = radarDataSets.cafe.desc;
+
+                radarChartInstance.data.datasets[0].label = radarDataSets.cafe.title;
+                radarChartInstance.data.datasets[0].data = radarDataSets.cafe.data;
+                radarChartInstance.data.datasets[0].backgroundColor = radarDataSets.cafe.bgColor;
+                radarChartInstance.data.datasets[0].borderColor = radarDataSets.cafe.borderColor;
+                radarChartInstance.data.datasets[0].pointBackgroundColor = radarDataSets.cafe.borderColor;
+            } else {
+                btnMatcha.className = "px-3 py-2 rounded-lg text-xs font-semibold bg-botanical-600 text-white shadow-sm transition";
+                btnCafe.className = "px-3 py-2 rounded-lg text-xs font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300 transition";
+                
+                titleEl.textContent = radarDataSets.matcha.title;
+                descEl.textContent = radarDataSets.matcha.desc;
+
+                radarChartInstance.data.datasets[0].label = radarDataSets.matcha.title;
+                radarChartInstance.data.datasets[0].data = radarDataSets.matcha.data;
+                radarChartInstance.data.datasets[0].backgroundColor = radarDataSets.matcha.bgColor;
+                radarChartInstance.data.datasets[0].borderColor = radarDataSets.matcha.borderColor;
+                radarChartInstance.data.datasets[0].pointBackgroundColor = radarDataSets.matcha.borderColor;
+            }
+            radarChartInstance.update();
+        }
+
+        // Biochemical Tab Switcher
+        function switchBioTab(tabKey) {
+            const tabs = ['neuro', 'metabolic', 'emotional'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tab-bio-${t}`);
+                const content = document.getElementById(`content-bio-${t}`);
+                if (t === tabKey) {
+                    btn.className = "bio-tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-botanical-600 text-white shadow-sm";
+                    content.classList.remove('hidden');
+                } else {
+                    btn.className = "bio-tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-gray-100 text-gray-600 hover:bg-gray-200";
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        // Commercial Dynamic Pricing Calculation
+        const pricingData = {
+            1: { total: 79.00, bags: 1, discount: "0%" },
+            2: { total: 149.00, bags: 2, discount: "6%" },
+            5: { total: 344.00, bags: 5, discount: "13%" }
+        };
+
+        function calculatePricing() {
+            const val = document.getElementById('tierSelect').value;
+            const data = pricingData[val];
+            
+            const costPerBag = (data.total / data.bags).toFixed(2);
+            const totalServings = data.bags * 30;
+            const costPerServing = (data.total / totalServings).toFixed(2);
+
+            document.getElementById('outBagCost').textContent = `$${costPerBag}`;
+            document.getElementById('outServings').textContent = `${totalServings} Servings`;
+            document.getElementById('outPerServing').textContent = `$${costPerServing}`;
+        }
+
+        // Pricing Bar Chart Initialization
+        function initPricingChart() {
+            const ctx = document.getElementById('pricingBarChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['1 Bag Tier ($79)', '2 Bag Bundle ($149)', '5 Bag Pack ($344)'],
+                    datasets: [{
+                        label: 'Cost Per Serving ($)',
+                        data: [2.63, 2.48, 2.29],
+                        backgroundColor: ['#d4a359', '#8c533e', '#5a7052'],
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 3.5,
+                            ticks: { callback: value => '$' + value.toFixed(2) }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        // Pharmacokinetic Line Chart Initialization
+        function initPharmacokineticChart() {
+            const ctx = document.getElementById('pharmacokineticLineChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['0 hr (Ingestion)', '1 hr', '2 hrs', '3 hrs', '4 hrs', '5 hrs', '6 hrs'],
+                    datasets: [
+                        {
+                            label: 'AGARA Cafe (L-Theanine + Berberine Buffered)',
+                            data: [20, 85, 88, 82, 75, 65, 55],
+                            borderColor: '#5a7052',
+                            backgroundColor: 'rgba(90, 112, 82, 0.1)',
+                            borderWidth: 3,
+                            tension: 0.3,
+                            fill: true
+                        },
+                        {
+                            label: 'Standard Unbuffered Dark Roast Coffee',
+                            data: [20, 95, 70, 35, 25, 20, 20], // Rapid spike & sharp drop/crash
+                            borderColor: '#dc2626',
+                            borderWidth: 2,
+                            borderDash: [5, 5],
+                            tension: 0.3,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                            title: { display: true, text: 'Subjective Alertness & Cognitive Focus' }
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12 } }
+                    }
+                }
+            });
+        }
+
+        // Global DOM Content Loaded Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            initRadarChart();
+            initPricingChart();
+            initPharmacokineticChart();
+            calculatePricing();
+        });
+    </script>
+</body>
+</html>

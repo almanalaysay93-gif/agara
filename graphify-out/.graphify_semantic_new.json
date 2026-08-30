@@ -1,0 +1,867 @@
+{
+  "nodes": [
+    {
+      "id": "agara_product_research_agara_coffee",
+      "label": "Agara Coffee",
+      "file_type": "concept",
+      "source_file": "agara_product_research.md",
+      "source_location": "agara_product_research.md#L5",
+      "source_url": "https://agaraglobal.com/agara-coffee/",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Combines premium coffee with functional ingredients (Lion's Mane, Chromemate Chromium, Green Coffee Bean, Berberine HCL, Saffron, Lotus Leaf, Citrus Aurantium, L-Theanine) for clean sustained energy, focus, and wellness support without unverified medical claims."
+    },
+    {
+      "id": "agara_product_research_matchagara",
+      "label": "MATCHAGARA",
+      "file_type": "concept",
+      "source_file": "agara_product_research.md",
+      "source_location": "agara_product_research.md#L7",
+      "source_url": "https://agaraglobal.com/agara-matcha-matchagara/",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Ceremonial-grade organic matcha combined with Lion's Mane mushroom, L-Theanine, Berberine HCL, Chromemate Chromium, Saffron, Lotus Leaf, and Citrus Aurantium for sustained energy, sharper focus, and mood balance."
+    },
+    {
+      "id": "agara_product_research_research_guardrails",
+      "label": "Agara Research & Claim Guardrails",
+      "file_type": "rationale",
+      "source_file": "agara_product_research.md",
+      "source_location": "agara_product_research.md#L9-L15",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Treat brand ingredient lists as reported claims rather than verified dosages, distinguish general ingredient science from finished product claims, and avoid disease-treatment, weight-loss, detox, and blood-sugar claims on public pages."
+    },
+    {
+      "id": "client_index_html_document",
+      "label": "Client HTML Document Entrypoint",
+      "file_type": "code",
+      "source_file": "client/index.html",
+      "source_location": "client/index.html#L1-L28",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "client_index_typography_imports",
+      "label": "Google Fonts Typography Imports",
+      "file_type": "code",
+      "source_file": "client/index.html",
+      "source_location": "client/index.html#L13-L16",
+      "source_url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "client_index_main_entry",
+      "label": "Main Application Script Reference",
+      "file_type": "code",
+      "source_file": "client/index.html",
+      "source_location": "client/index.html#L20",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "drive_inventory_media_inventory",
+      "label": "Google Drive Media Inventory",
+      "file_type": "document",
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L1-L16",
+      "source_url": "https://drive.google.com/drive/folders/1hOryjn0JYGCDV0a-JM419hirCu44VUFP",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "drive_inventory_support_image_a",
+      "label": "Matcha Support Image (support-image-a.png)",
+      "file_type": "image",
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L20",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "High-key horizontal matcha composition with editorial typography 'ELEVATE YOUR DAY' and MatchAgara pouch for full-bleed matcha product intro strip."
+    },
+    {
+      "id": "drive_inventory_support_image_b",
+      "label": "Coffee Support Image (support-image-b.png)",
+      "file_type": "image",
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L22",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Warm ivory and copper horizontal coffee composition pairing with matcha image for deliberate two-panel product ritual chapter."
+    },
+    {
+      "id": "drive_inventory_reference_packaging",
+      "label": "Reference Packaging Image (reference-packaging.png)",
+      "file_type": "image",
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L11",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Portrait product still retained for hero visual anchor directly matching original project brief."
+    },
+    {
+      "id": "drive_inventory_ritual_video_a",
+      "label": "Agara Cafe Dark Roast Coffee Video (ritual-video-a.mp4)",
+      "file_type": "concept",
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L26",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "16:9 dark roast coffee video with pour-over sequence reserved for coffee-specific story or product detail page."
+    },
+    {
+      "id": "drive_inventory_ritual_video_b",
+      "label": "MatchAgara / Cafe Lifestyle Video (ritual-video-b.mp4)",
+      "file_type": "concept",
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L28",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "16:9 lifestyle video combining macro preparation and human ritual shots for interlude before benefit sections."
+    },
+    {
+      "id": "drive_inventory_ritual_video_c",
+      "label": "Dual-Product Split-Screen Video (ritual-video-c.mp4)",
+      "file_type": "concept",
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L30",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "16:9 dual-product split-screen video used as muted, autoplay, looped media interlude reinforcing two-product ritual story."
+    },
+    {
+      "id": "ideas_botanical_editorial_ritual",
+      "label": "Botanical Editorial Ritual Design Direction",
+      "file_type": "rationale",
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L20-L79",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Contemporary botanical editorialism with quiet-luxury packaging cues, tactile still-life composition, asymmetric calm, material honesty, and ritual over rush."
+    },
+    {
+      "id": "ideas_clinical_modern_vitality",
+      "label": "Clinical Modern Vitality Direction",
+      "file_type": "rationale",
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L10-L14",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Bright evidence-led direction built around crisp product diagrams and mineral whites, rejected in favor of Botanical Editorial Ritual."
+    },
+    {
+      "id": "ideas_roasted_atelier",
+      "label": "Roasted Atelier Direction",
+      "file_type": "rationale",
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L15-L19",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Dark cinematic coffee-house direction with ember copper and deep espresso, evaluated as alternative candidate."
+    },
+    {
+      "id": "ideas_color_philosophy",
+      "label": "Agara Color Philosophy & Copper",
+      "file_type": "rationale",
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L31-L35",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Built from quiet cream ground, living matcha green, roasted espresso, and signature Agara Copper #B86538 connecting matcha and coffee through elevation."
+    },
+    {
+      "id": "ideas_typography_system",
+      "label": "Agara Typography System",
+      "file_type": "rationale",
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L50-L52",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Pairs Cormorant Garamond for editorial statements and poetic titles with DM Sans for navigation, UI controls, and readable body text."
+    },
+    {
+      "id": "ideas_leaf_flame_monogram",
+      "label": "Leaf-Flame Monogram & Wordmark",
+      "file_type": "rationale",
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L65-L67",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Uppercase wordmark with custom copper caret and two opposing tapered forms meeting at a calm central point symbolizing botanical calm and roasted energy."
+    },
+    {
+      "id": "ideas_ritual_phases_arc",
+      "label": "Wake Focus Restore Ritual Arc",
+      "file_type": "concept",
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L80-L87",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Editorial narrative arc moving across Wake, Focus, Restore, The Formula, and Your Next Ritual using Drive media films."
+    },
+    {
+      "id": "todo_drive_media_integration",
+      "label": "Drive Media Integration Task List",
+      "file_type": "document",
+      "source_file": "todo.md",
+      "source_location": "todo.md#L1-L29",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "todo_research_informed_product_education",
+      "label": "Research-Informed Product Education Plan",
+      "file_type": "rationale",
+      "source_file": "todo.md",
+      "source_location": "todo.md#L3-L11",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Specifies requirements to identify authoritative sources, separate label claims from general science, and add cited ingredients section with cautious wording."
+    },
+    {
+      "id": "todo_cropping_fix",
+      "label": "Media Cropping Fix & Containment",
+      "file_type": "rationale",
+      "source_file": "todo.md",
+      "source_location": "todo.md#L13-L20",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Resolves viewport cropping by switching editorial creatives to full-frame containment while preserving hero emphasis."
+    },
+    {
+      "id": "image_and_vids_file_00000000153c81faaf379f47e7226314_dual_product_lineup_banner",
+      "label": "Agara Elevated Life Dual Product Lineup Banner (Matchagara & Agara Cafe)",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/file_00000000153c81faaf379f47e7226314.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_file_00000000153c81faaf379f47e7226314_matchagara_packaging",
+      "label": "Matchagara Functional Matcha Packaging (30 Servings 120g)",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/file_00000000153c81faaf379f47e7226314.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_file_00000000153c81faaf379f47e7226314_agara_cafe_packaging",
+      "label": "Agara Cafe Dark Roast Coffee Packaging (30 Servings 75g)",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/file_00000000153c81faaf379f47e7226314.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_file_00000000153c81faaf379f47e7226314_brand_value_pillars",
+      "label": "Agara Brand Pillars (Premium Ingredients, Functional Benefits, Clean & Natural, Elevated Life)",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/file_00000000153c81faaf379f47e7226314.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_file_000000006ba881fa91f6cbde8e87f99d_elevate_your_day_coffee_hero",
+      "label": "Elevate Your Day Agara Cafe Coffee Hero Ad Banner",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/file_000000006ba881fa91f6cbde8e87f99d.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_file_000000006ba881fa91f6cbde8e87f99d_dark_roast_product_display",
+      "label": "Agara Cafe Dark Roast Coffee Product Display with Whole & Ground Beans",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/file_000000006ba881fa91f6cbde8e87f99d.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_file_000000006ba881fa91f6cbde8e87f99d_shop_now_cta",
+      "label": "Shop Now Call-to-Action for Agara Cafe",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/file_000000006ba881fa91f6cbde8e87f99d.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_file_00000000fae4820b8968c352a1346cc6_elevate_your_day_matcha_hero",
+      "label": "Elevate Your Day Matchagara Functional Matcha Hero Ad Banner",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/file_00000000fae4820b8968c352a1346cc6.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_file_00000000fae4820b8968c352a1346cc6_matchagara_product_display",
+      "label": "Matchagara Functional Matcha Product Display with Powder & Iced Latte",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/file_00000000fae4820b8968c352a1346cc6.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_file_00000000fae4820b8968c352a1346cc6_shop_now_matcha_cta",
+      "label": "Shop Now Call-to-Action for Matchagara",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/file_00000000fae4820b8968c352a1346cc6.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_images_1_agara_cafe_orange_gradient_mockup",
+      "label": "Agara Cafe Dark Roast Coffee Pouch Mockup on Orange Background",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/images (1).jpeg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_images_2_matchagara_pouch_powder_mockup",
+      "label": "Matchagara Functional Matcha Pouch Mockup with Powder Mound",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/images (2).jpeg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_images_3_matchagara_latte_product_shot",
+      "label": "Matchagara Functional Matcha Packaging with Iced Latte and Powder",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/images (3).jpeg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "image_and_vids_images_agara_cafe_beans_grounds_shot",
+      "label": "Agara Cafe Dark Roast Coffee Pouch with Coffee Beans and Grounds",
+      "file_type": "image",
+      "source_file": "images and vids/image and vids/images.jpeg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "ideas_botanical_editorial_ritual",
+      "target": "ideas_color_philosophy",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L31-L35",
+      "weight": 1.0
+    },
+    {
+      "source": "ideas_botanical_editorial_ritual",
+      "target": "ideas_typography_system",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L50-L52",
+      "weight": 1.0
+    },
+    {
+      "source": "ideas_botanical_editorial_ritual",
+      "target": "ideas_leaf_flame_monogram",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L65-L67",
+      "weight": 1.0
+    },
+    {
+      "source": "ideas_botanical_editorial_ritual",
+      "target": "ideas_ritual_phases_arc",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L80-L87",
+      "weight": 1.0
+    },
+    {
+      "source": "client_index_typography_imports",
+      "target": "ideas_typography_system",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "client/index.html",
+      "source_location": "client/index.html#L15",
+      "weight": 1.0
+    },
+    {
+      "source": "client_index_html_document",
+      "target": "client_index_typography_imports",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/index.html",
+      "source_location": "client/index.html#L13-L16",
+      "weight": 1.0
+    },
+    {
+      "source": "client_index_html_document",
+      "target": "client_index_main_entry",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/index.html",
+      "source_location": "client/index.html#L20",
+      "weight": 1.0
+    },
+    {
+      "source": "drive_inventory_media_inventory",
+      "target": "drive_inventory_support_image_a",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L20",
+      "weight": 1.0
+    },
+    {
+      "source": "drive_inventory_media_inventory",
+      "target": "drive_inventory_support_image_b",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L22",
+      "weight": 1.0
+    },
+    {
+      "source": "drive_inventory_media_inventory",
+      "target": "drive_inventory_reference_packaging",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L11",
+      "weight": 1.0
+    },
+    {
+      "source": "drive_inventory_media_inventory",
+      "target": "drive_inventory_ritual_video_a",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L26",
+      "weight": 1.0
+    },
+    {
+      "source": "drive_inventory_media_inventory",
+      "target": "drive_inventory_ritual_video_b",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L28",
+      "weight": 1.0
+    },
+    {
+      "source": "drive_inventory_media_inventory",
+      "target": "drive_inventory_ritual_video_c",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L30",
+      "weight": 1.0
+    },
+    {
+      "source": "drive_inventory_support_image_a",
+      "target": "agara_product_research_matchagara",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L20",
+      "weight": 1.0
+    },
+    {
+      "source": "drive_inventory_support_image_b",
+      "target": "agara_product_research_agara_coffee",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "drive_inventory.md",
+      "source_location": "drive_inventory.md#L22",
+      "weight": 1.0
+    },
+    {
+      "source": "ideas_ritual_phases_arc",
+      "target": "drive_inventory_ritual_video_c",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ideas.md",
+      "source_location": "ideas.md#L83-L86",
+      "weight": 1.0
+    },
+    {
+      "source": "todo_research_informed_product_education",
+      "target": "agara_product_research_research_guardrails",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "todo.md",
+      "source_location": "todo.md#L3-L8",
+      "weight": 1.0
+    },
+    {
+      "source": "todo_cropping_fix",
+      "target": "drive_inventory_media_inventory",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "todo.md",
+      "source_location": "todo.md#L13-L20",
+      "weight": 1.0
+    },
+    {
+      "source": "todo_drive_media_integration",
+      "target": "todo_research_informed_product_education",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "todo.md",
+      "source_location": "todo.md#L3-L10",
+      "weight": 1.0
+    },
+    {
+      "source": "todo_drive_media_integration",
+      "target": "todo_cropping_fix",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "todo.md",
+      "source_location": "todo.md#L13-L19",
+      "weight": 1.0
+    },
+    {
+      "source": "agara_product_research_research_guardrails",
+      "target": "agara_product_research_agara_coffee",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agara_product_research.md",
+      "source_location": "agara_product_research.md#L9-L14",
+      "weight": 1.0
+    },
+    {
+      "source": "agara_product_research_research_guardrails",
+      "target": "agara_product_research_matchagara",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agara_product_research.md",
+      "source_location": "agara_product_research.md#L9-L14",
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_file_00000000153c81faaf379f47e7226314_dual_product_lineup_banner",
+      "target": "image_and_vids_file_00000000153c81faaf379f47e7226314_matchagara_packaging",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "images and vids/image and vids/file_00000000153c81faaf379f47e7226314.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_file_00000000153c81faaf379f47e7226314_dual_product_lineup_banner",
+      "target": "image_and_vids_file_00000000153c81faaf379f47e7226314_agara_cafe_packaging",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "images and vids/image and vids/file_00000000153c81faaf379f47e7226314.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_file_00000000153c81faaf379f47e7226314_dual_product_lineup_banner",
+      "target": "image_and_vids_file_00000000153c81faaf379f47e7226314_brand_value_pillars",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "images and vids/image and vids/file_00000000153c81faaf379f47e7226314.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_file_00000000153c81faaf379f47e7226314_matchagara_packaging",
+      "target": "image_and_vids_file_00000000153c81faaf379f47e7226314_agara_cafe_packaging",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "images and vids/image and vids/file_00000000153c81faaf379f47e7226314.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_file_000000006ba881fa91f6cbde8e87f99d_elevate_your_day_coffee_hero",
+      "target": "image_and_vids_file_000000006ba881fa91f6cbde8e87f99d_dark_roast_product_display",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "images and vids/image and vids/file_000000006ba881fa91f6cbde8e87f99d.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_file_000000006ba881fa91f6cbde8e87f99d_elevate_your_day_coffee_hero",
+      "target": "image_and_vids_file_000000006ba881fa91f6cbde8e87f99d_shop_now_cta",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "images and vids/image and vids/file_000000006ba881fa91f6cbde8e87f99d.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_file_00000000fae4820b8968c352a1346cc6_elevate_your_day_matcha_hero",
+      "target": "image_and_vids_file_00000000fae4820b8968c352a1346cc6_matchagara_product_display",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "images and vids/image and vids/file_00000000fae4820b8968c352a1346cc6.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_file_00000000fae4820b8968c352a1346cc6_elevate_your_day_matcha_hero",
+      "target": "image_and_vids_file_00000000fae4820b8968c352a1346cc6_shop_now_matcha_cta",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "images and vids/image and vids/file_00000000fae4820b8968c352a1346cc6.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_file_000000006ba881fa91f6cbde8e87f99d_elevate_your_day_coffee_hero",
+      "target": "image_and_vids_file_00000000fae4820b8968c352a1346cc6_elevate_your_day_matcha_hero",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "images and vids/image and vids/file_000000006ba881fa91f6cbde8e87f99d.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_file_00000000153c81faaf379f47e7226314_matchagara_packaging",
+      "target": "image_and_vids_file_00000000fae4820b8968c352a1346cc6_matchagara_product_display",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "images and vids/image and vids/file_00000000153c81faaf379f47e7226314.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_file_00000000153c81faaf379f47e7226314_agara_cafe_packaging",
+      "target": "image_and_vids_file_000000006ba881fa91f6cbde8e87f99d_dark_roast_product_display",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "images and vids/image and vids/file_00000000153c81faaf379f47e7226314.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_images_1_agara_cafe_orange_gradient_mockup",
+      "target": "image_and_vids_file_000000006ba881fa91f6cbde8e87f99d_dark_roast_product_display",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "images and vids/image and vids/images (1).jpeg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_images_agara_cafe_beans_grounds_shot",
+      "target": "image_and_vids_file_000000006ba881fa91f6cbde8e87f99d_dark_roast_product_display",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "images and vids/image and vids/images.jpeg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_images_2_matchagara_pouch_powder_mockup",
+      "target": "image_and_vids_file_00000000fae4820b8968c352a1346cc6_matchagara_product_display",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "images and vids/image and vids/images (2).jpeg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_images_3_matchagara_latte_product_shot",
+      "target": "image_and_vids_file_00000000fae4820b8968c352a1346cc6_matchagara_product_display",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "images and vids/image and vids/images (3).jpeg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_images_2_matchagara_pouch_powder_mockup",
+      "target": "image_and_vids_images_3_matchagara_latte_product_shot",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "images and vids/image and vids/images (2).jpeg",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "image_and_vids_images_1_agara_cafe_orange_gradient_mockup",
+      "target": "image_and_vids_images_agara_cafe_beans_grounds_shot",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "images and vids/image and vids/images (1).jpeg",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "ritual_media_composition",
+      "label": "Ritual Media and Storytelling Pipeline",
+      "nodes": [
+        "ideas_ritual_phases_arc",
+        "drive_inventory_ritual_video_c",
+        "drive_inventory_support_image_a",
+        "drive_inventory_support_image_b"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "ideas.md"
+    },
+    {
+      "id": "botanical_design_foundations",
+      "label": "Botanical Editorial Design System",
+      "nodes": [
+        "ideas_botanical_editorial_ritual",
+        "ideas_color_philosophy",
+        "ideas_typography_system",
+        "ideas_leaf_flame_monogram"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ideas.md"
+    },
+    {
+      "id": "product_claim_governance",
+      "label": "Agara Product Claim Compliance Framework",
+      "nodes": [
+        "agara_product_research_agara_coffee",
+        "agara_product_research_matchagara",
+        "agara_product_research_research_guardrails",
+        "todo_research_informed_product_education"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "agara_product_research.md"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

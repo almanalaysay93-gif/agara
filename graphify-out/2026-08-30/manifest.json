@@ -1,0 +1,542 @@
+{
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\public\\__manus__\\debug-collector.js": {
+    "mtime": 1788088562.0089986,
+    "seen": 1788089570.815134,
+    "ast_hash": "45b1e83bacf2dc3d3b20bb18b465abe0",
+    "semantic_hash": "45b1e83bacf2dc3d3b20bb18b465abe0"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\App.tsx": {
+    "mtime": 1788088562.0250473,
+    "seen": 1788089570.8151443,
+    "ast_hash": "b5d66a548f3ba63e42e5aa2bbfd3ef31",
+    "semantic_hash": "b5d66a548f3ba63e42e5aa2bbfd3ef31"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ErrorBoundary.tsx": {
+    "mtime": 1788088562.1204226,
+    "seen": 1788089570.8151486,
+    "ast_hash": "92d65c611d7e8336eb920329b0e0ffad",
+    "semantic_hash": "92d65c611d7e8336eb920329b0e0ffad"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ManusDialog.tsx": {
+    "mtime": 1788088562.1204226,
+    "seen": 1788089570.8151507,
+    "ast_hash": "ea2d4e2f5d5f938551b00a82dd782574",
+    "semantic_hash": "ea2d4e2f5d5f938551b00a82dd782574"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\Map.tsx": {
+    "mtime": 1788088562.140101,
+    "seen": 1788089570.8151531,
+    "ast_hash": "651182e03ca936c68d60b16db8e3e0c0",
+    "semantic_hash": "651182e03ca936c68d60b16db8e3e0c0"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\accordion.tsx": {
+    "mtime": 1788088562.151899,
+    "seen": 1788089570.815155,
+    "ast_hash": "1ab9c0ae828da7b2bd5cfd6e778d78a2",
+    "semantic_hash": "1ab9c0ae828da7b2bd5cfd6e778d78a2"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\alert-dialog.tsx": {
+    "mtime": 1788088562.155917,
+    "seen": 1788089570.8151572,
+    "ast_hash": "cb21a28172d7b2dcfa779c4d9e3e6138",
+    "semantic_hash": "cb21a28172d7b2dcfa779c4d9e3e6138"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\alert.tsx": {
+    "mtime": 1788088562.1678245,
+    "seen": 1788089570.8151593,
+    "ast_hash": "27d39141a507b20ed52b7af644850375",
+    "semantic_hash": "27d39141a507b20ed52b7af644850375"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\aspect-ratio.tsx": {
+    "mtime": 1788088562.1718428,
+    "seen": 1788089570.815161,
+    "ast_hash": "7abbbe7b04b98a307c559cfb5e301b34",
+    "semantic_hash": "7abbbe7b04b98a307c559cfb5e301b34"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\avatar.tsx": {
+    "mtime": 1788088562.1839113,
+    "seen": 1788089570.8151631,
+    "ast_hash": "1e9aaa62ec5c90a723736a7bff9c2ddc",
+    "semantic_hash": "1e9aaa62ec5c90a723736a7bff9c2ddc"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\badge.tsx": {
+    "mtime": 1788088562.190843,
+    "seen": 1788089570.8151653,
+    "ast_hash": "a4ff272d429bab415f27f7fd01a1e2b9",
+    "semantic_hash": "a4ff272d429bab415f27f7fd01a1e2b9"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\breadcrumb.tsx": {
+    "mtime": 1788088562.1997857,
+    "seen": 1788089570.8151672,
+    "ast_hash": "9e6bacc6f3debbf5be602ed566d63ead",
+    "semantic_hash": "9e6bacc6f3debbf5be602ed566d63ead"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\button-group.tsx": {
+    "mtime": 1788088562.1997857,
+    "seen": 1788089570.8151696,
+    "ast_hash": "b322685a0ae3c9fbf6f0f77e28ddec98",
+    "semantic_hash": "b322685a0ae3c9fbf6f0f77e28ddec98"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\button.tsx": {
+    "mtime": 1788088562.214816,
+    "seen": 1788089570.8151715,
+    "ast_hash": "af3d8b618eba2684cee78e42d2945c93",
+    "semantic_hash": "af3d8b618eba2684cee78e42d2945c93"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\calendar.tsx": {
+    "mtime": 1788088562.2207208,
+    "seen": 1788089570.8151734,
+    "ast_hash": "1b38a476e71cda6c914c55321dd5d25f",
+    "semantic_hash": "1b38a476e71cda6c914c55321dd5d25f"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\card.tsx": {
+    "mtime": 1788088562.228926,
+    "seen": 1788089570.8151755,
+    "ast_hash": "99de711a6f221ab31430f0c2437b2465",
+    "semantic_hash": "99de711a6f221ab31430f0c2437b2465"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\carousel.tsx": {
+    "mtime": 1788088562.2367895,
+    "seen": 1788089570.8151772,
+    "ast_hash": "9f51cba1d05ddea3c414d36a6ae8b1b9",
+    "semantic_hash": "9f51cba1d05ddea3c414d36a6ae8b1b9"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\chart.tsx": {
+    "mtime": 1788088562.2428186,
+    "seen": 1788089570.8151789,
+    "ast_hash": "0c66aa31bcedfb55e613b3317f7ff0b3",
+    "semantic_hash": "0c66aa31bcedfb55e613b3317f7ff0b3"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\checkbox.tsx": {
+    "mtime": 1788088562.2494178,
+    "seen": 1788089570.815181,
+    "ast_hash": "8f82bb39d34a8bf92aa948c446df00c9",
+    "semantic_hash": "8f82bb39d34a8bf92aa948c446df00c9"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\collapsible.tsx": {
+    "mtime": 1788088562.2534323,
+    "seen": 1788089570.8151832,
+    "ast_hash": "dad375a28987cdb7c87d3d7ec6808177",
+    "semantic_hash": "dad375a28987cdb7c87d3d7ec6808177"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\command.tsx": {
+    "mtime": 1788088562.263047,
+    "seen": 1788089570.8151848,
+    "ast_hash": "75ddb5d9ae577bc27c9341cc7d0fb818",
+    "semantic_hash": "75ddb5d9ae577bc27c9341cc7d0fb818"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\context-menu.tsx": {
+    "mtime": 1788088562.266775,
+    "seen": 1788089570.8151867,
+    "ast_hash": "dfcba980e3d6886dfc184fb37ab2cc5b",
+    "semantic_hash": "dfcba980e3d6886dfc184fb37ab2cc5b"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\dialog.tsx": {
+    "mtime": 1788088562.2758236,
+    "seen": 1788089570.8151894,
+    "ast_hash": "0148b8f43eaf9165d46342241392857f",
+    "semantic_hash": "0148b8f43eaf9165d46342241392857f"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\drawer.tsx": {
+    "mtime": 1788088562.2808907,
+    "seen": 1788089570.8151913,
+    "ast_hash": "d7b4764fe25f89c1d8d3bb88fdab1afe",
+    "semantic_hash": "d7b4764fe25f89c1d8d3bb88fdab1afe"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\dropdown-menu.tsx": {
+    "mtime": 1788088562.2871318,
+    "seen": 1788089570.8151932,
+    "ast_hash": "6cf8b9db80e1f8af1c37d0a35d4978c4",
+    "semantic_hash": "6cf8b9db80e1f8af1c37d0a35d4978c4"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\empty.tsx": {
+    "mtime": 1788088562.294901,
+    "seen": 1788089570.8151948,
+    "ast_hash": "54f1416fa023c63f09affafe7d5ff9b6",
+    "semantic_hash": "54f1416fa023c63f09affafe7d5ff9b6"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\field.tsx": {
+    "mtime": 1788088562.296908,
+    "seen": 1788089570.8151968,
+    "ast_hash": "9824be7e1cc6368357e86c3c60007401",
+    "semantic_hash": "9824be7e1cc6368357e86c3c60007401"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\form.tsx": {
+    "mtime": 1788088562.296908,
+    "seen": 1788089570.8151987,
+    "ast_hash": "2f69f5e6d4c448aeb9260682e3a79705",
+    "semantic_hash": "2f69f5e6d4c448aeb9260682e3a79705"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\hover-card.tsx": {
+    "mtime": 1788088562.310536,
+    "seen": 1788089570.8152006,
+    "ast_hash": "2a806abe96058eafe372e1f8b264551f",
+    "semantic_hash": "2a806abe96058eafe372e1f8b264551f"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\input-group.tsx": {
+    "mtime": 1788088562.310536,
+    "seen": 1788089570.8152022,
+    "ast_hash": "ae21ac400a0e8cdf226cff0485ab2b09",
+    "semantic_hash": "ae21ac400a0e8cdf226cff0485ab2b09"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\input-otp.tsx": {
+    "mtime": 1788088562.3284178,
+    "seen": 1788089570.8152041,
+    "ast_hash": "764264a5fc6fd69ff74b365811e07736",
+    "semantic_hash": "764264a5fc6fd69ff74b365811e07736"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\input.tsx": {
+    "mtime": 1788088562.3344393,
+    "seen": 1788089570.815206,
+    "ast_hash": "d232fe60b11a798e1633b00b2ea9de4c",
+    "semantic_hash": "d232fe60b11a798e1633b00b2ea9de4c"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\item.tsx": {
+    "mtime": 1788088562.336447,
+    "seen": 1788089570.815208,
+    "ast_hash": "d3a7444d0fb49f8fa91b57f7140603e2",
+    "semantic_hash": "d3a7444d0fb49f8fa91b57f7140603e2"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\kbd.tsx": {
+    "mtime": 1788088562.3422186,
+    "seen": 1788089570.8152099,
+    "ast_hash": "4882ae0a88c1dfaf741f2f727949bcf2",
+    "semantic_hash": "4882ae0a88c1dfaf741f2f727949bcf2"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\label.tsx": {
+    "mtime": 1788088562.3509283,
+    "seen": 1788089570.8152118,
+    "ast_hash": "2d01ac52b1b7c4d01c9d09c02f08ba2c",
+    "semantic_hash": "2d01ac52b1b7c4d01c9d09c02f08ba2c"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\menubar.tsx": {
+    "mtime": 1788088562.357589,
+    "seen": 1788089570.815214,
+    "ast_hash": "d978677aeb111d048dae2ec26feb30a3",
+    "semantic_hash": "d978677aeb111d048dae2ec26feb30a3"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\navigation-menu.tsx": {
+    "mtime": 1788088562.3656166,
+    "seen": 1788089570.8152156,
+    "ast_hash": "fff71d119629f4384576abc8c86db98e",
+    "semantic_hash": "fff71d119629f4384576abc8c86db98e"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\pagination.tsx": {
+    "mtime": 1788088562.3733864,
+    "seen": 1788089570.8152175,
+    "ast_hash": "607b8b7f4d58c3077249e56192760a64",
+    "semantic_hash": "607b8b7f4d58c3077249e56192760a64"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\popover.tsx": {
+    "mtime": 1788088562.3786435,
+    "seen": 1788089570.8152194,
+    "ast_hash": "09c92993acdba8f315704862f18cc9ff",
+    "semantic_hash": "09c92993acdba8f315704862f18cc9ff"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\progress.tsx": {
+    "mtime": 1788088562.3806498,
+    "seen": 1788089570.815221,
+    "ast_hash": "7979073b46fefa5f90a4215fdff5ba5a",
+    "semantic_hash": "7979073b46fefa5f90a4215fdff5ba5a"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\radio-group.tsx": {
+    "mtime": 1788088562.389246,
+    "seen": 1788089570.815223,
+    "ast_hash": "a61efebb67265d71632fb9524729469e",
+    "semantic_hash": "a61efebb67265d71632fb9524729469e"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\resizable.tsx": {
+    "mtime": 1788088562.389246,
+    "seen": 1788089570.815225,
+    "ast_hash": "4fad111fafa45ae68c9a0a22465b7ec5",
+    "semantic_hash": "4fad111fafa45ae68c9a0a22465b7ec5"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\scroll-area.tsx": {
+    "mtime": 1788088562.399415,
+    "seen": 1788089570.8152268,
+    "ast_hash": "c1a85e10b1d17c2e2badb0b2a5eb2b22",
+    "semantic_hash": "c1a85e10b1d17c2e2badb0b2a5eb2b22"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\select.tsx": {
+    "mtime": 1788088562.4050946,
+    "seen": 1788089570.81523,
+    "ast_hash": "8ca4147f64684089c60554f09933fba0",
+    "semantic_hash": "8ca4147f64684089c60554f09933fba0"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\separator.tsx": {
+    "mtime": 1788088562.4091048,
+    "seen": 1788089570.8152318,
+    "ast_hash": "c5a8b5405f8d5fa8dfa3d4eabe3a2bc4",
+    "semantic_hash": "c5a8b5405f8d5fa8dfa3d4eabe3a2bc4"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\sheet.tsx": {
+    "mtime": 1788088562.413118,
+    "seen": 1788089570.8152335,
+    "ast_hash": "23fc89561f842f153c4740aaab2600ac",
+    "semantic_hash": "23fc89561f842f153c4740aaab2600ac"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\sidebar.tsx": {
+    "mtime": 1788088562.420402,
+    "seen": 1788089570.8152354,
+    "ast_hash": "d3837b637272212ca38e977fb8f53c60",
+    "semantic_hash": "d3837b637272212ca38e977fb8f53c60"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\skeleton.tsx": {
+    "mtime": 1788088562.4284382,
+    "seen": 1788089570.8152373,
+    "ast_hash": "6da3e59043b0ae683f9302d318d19d16",
+    "semantic_hash": "6da3e59043b0ae683f9302d318d19d16"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\slider.tsx": {
+    "mtime": 1788088562.4324527,
+    "seen": 1788089570.815239,
+    "ast_hash": "da245cc3e54230e124635e33784f89b5",
+    "semantic_hash": "da245cc3e54230e124635e33784f89b5"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\sonner.tsx": {
+    "mtime": 1788088562.4577658,
+    "seen": 1788089570.8152406,
+    "ast_hash": "73849904af65861ceede653f824aa552",
+    "semantic_hash": "73849904af65861ceede653f824aa552"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\spinner.tsx": {
+    "mtime": 1788088562.4577658,
+    "seen": 1788089570.8152428,
+    "ast_hash": "4799669575bae50e8c2b5a1764cb8c89",
+    "semantic_hash": "4799669575bae50e8c2b5a1764cb8c89"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\switch.tsx": {
+    "mtime": 1788088562.4684603,
+    "seen": 1788089570.8152444,
+    "ast_hash": "341211b469df84e5d9e8d65e87970871",
+    "semantic_hash": "341211b469df84e5d9e8d65e87970871"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\table.tsx": {
+    "mtime": 1788088562.471277,
+    "seen": 1788089570.8152463,
+    "ast_hash": "1b0da9795f8741a283b46cbd16918492",
+    "semantic_hash": "1b0da9795f8741a283b46cbd16918492"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\tabs.tsx": {
+    "mtime": 1788088562.4812198,
+    "seen": 1788089570.8152485,
+    "ast_hash": "2e84246671933960b1beba171f6a7c8a",
+    "semantic_hash": "2e84246671933960b1beba171f6a7c8a"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\textarea.tsx": {
+    "mtime": 1788088562.486239,
+    "seen": 1788089570.8152504,
+    "ast_hash": "1c69b4138bea5bc6bb631a632add7562",
+    "semantic_hash": "1c69b4138bea5bc6bb631a632add7562"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\toggle-group.tsx": {
+    "mtime": 1788088562.4922578,
+    "seen": 1788089570.8152523,
+    "ast_hash": "8941a113e6b85b26dba6091d97b478ba",
+    "semantic_hash": "8941a113e6b85b26dba6091d97b478ba"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\toggle.tsx": {
+    "mtime": 1788088562.4982758,
+    "seen": 1788089570.815254,
+    "ast_hash": "4fbb6228d377028844d88001b88774ff",
+    "semantic_hash": "4fbb6228d377028844d88001b88774ff"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\components\\ui\\tooltip.tsx": {
+    "mtime": 1788088562.5020313,
+    "seen": 1788089570.8152559,
+    "ast_hash": "4739c9ad1c3b9f06058205e11a3bcd59",
+    "semantic_hash": "4739c9ad1c3b9f06058205e11a3bcd59"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\const.ts": {
+    "mtime": 1788088562.0932686,
+    "seen": 1788089570.8152575,
+    "ast_hash": "5f3afb037013a54a2cf62b621b5e9f28",
+    "semantic_hash": "5f3afb037013a54a2cf62b621b5e9f28"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\contexts\\ThemeContext.tsx": {
+    "mtime": 1788088562.5205252,
+    "seen": 1788089570.8152597,
+    "ast_hash": "406ca3330570fa4c4b3e7714c3fac7f8",
+    "semantic_hash": "406ca3330570fa4c4b3e7714c3fac7f8"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\hooks\\useComposition.ts": {
+    "mtime": 1788088562.5475736,
+    "seen": 1788089570.8152614,
+    "ast_hash": "16bbb7a4775b78704034802eb6d8ea5b",
+    "semantic_hash": "16bbb7a4775b78704034802eb6d8ea5b"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\hooks\\useMobile.tsx": {
+    "mtime": 1788088562.5540986,
+    "seen": 1788089570.815263,
+    "ast_hash": "b8c573c05d1d83956a7ec166c87b8075",
+    "semantic_hash": "b8c573c05d1d83956a7ec166c87b8075"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\hooks\\usePersistFn.ts": {
+    "mtime": 1788088562.5730784,
+    "seen": 1788089570.815265,
+    "ast_hash": "693f129cc13fa61de95d481e6f7939c2",
+    "semantic_hash": "693f129cc13fa61de95d481e6f7939c2"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\lib\\utils.ts": {
+    "mtime": 1788088562.6076794,
+    "seen": 1788089570.8152666,
+    "ast_hash": "d9837f38cc05303254571985e3164050",
+    "semantic_hash": "d9837f38cc05303254571985e3164050"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\main.tsx": {
+    "mtime": 1788088562.1123774,
+    "seen": 1788089570.8152683,
+    "ast_hash": "0da263f654e858856022667237989393",
+    "semantic_hash": "0da263f654e858856022667237989393"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\pages\\Home.tsx": {
+    "mtime": 1788088562.6131802,
+    "seen": 1788089570.8152702,
+    "ast_hash": "26811280b118399e4fea574de4f2c4a1",
+    "semantic_hash": "26811280b118399e4fea574de4f2c4a1"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\src\\pages\\NotFound.tsx": {
+    "mtime": 1788088562.6205912,
+    "seen": 1788089570.815272,
+    "ast_hash": "9003d82eb8ae3e14409648f90ab30373",
+    "semantic_hash": "9003d82eb8ae3e14409648f90ab30373"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\components.json": {
+    "mtime": 1788088562.7364652,
+    "seen": 1788089570.815274,
+    "ast_hash": "3cd4ec12955c1b7b8651fff5ded96534",
+    "semantic_hash": "3cd4ec12955c1b7b8651fff5ded96534"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\package.json": {
+    "mtime": 1788088562.7571416,
+    "seen": 1788089570.8152757,
+    "ast_hash": "f9ae2c06ed2b132a5a4f1ff29e2c3886",
+    "semantic_hash": "f9ae2c06ed2b132a5a4f1ff29e2c3886"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\server\\index.ts": {
+    "mtime": 1788088562.6675508,
+    "seen": 1788089570.8152776,
+    "ast_hash": "2e4fdb629c9ffcd9f2a8bbe6f101012b",
+    "semantic_hash": "2e4fdb629c9ffcd9f2a8bbe6f101012b"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\shared\\const.ts": {
+    "mtime": 1788088562.6890905,
+    "seen": 1788089570.8152797,
+    "ast_hash": "70885ab2ec5d74d35f112546cd740d34",
+    "semantic_hash": "70885ab2ec5d74d35f112546cd740d34"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\template.json": {
+    "mtime": 1788088562.7736456,
+    "seen": 1788089570.8152812,
+    "ast_hash": "9a7d005ef7700fcc05742c87c5d0a78f",
+    "semantic_hash": "9a7d005ef7700fcc05742c87c5d0a78f"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\tsconfig.json": {
+    "mtime": 1788088562.7875957,
+    "seen": 1788089570.8152833,
+    "ast_hash": "1e0fa60a1abb0b4bfeed3e2613a5bfff",
+    "semantic_hash": "1e0fa60a1abb0b4bfeed3e2613a5bfff"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\tsconfig.node.json": {
+    "mtime": 1788088562.7936137,
+    "seen": 1788089570.815285,
+    "ast_hash": "fd32df1e922920eb085c1d20ffd7fd58",
+    "semantic_hash": "fd32df1e922920eb085c1d20ffd7fd58"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\vite.config.ts": {
+    "mtime": 1788088562.8134103,
+    "seen": 1788089570.8152869,
+    "ast_hash": "dd71a4ea72fab3a14cc723a9cf7a70ce",
+    "semantic_hash": "dd71a4ea72fab3a14cc723a9cf7a70ce"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\agara_product_research.md": {
+    "mtime": 1788088562.7287033,
+    "seen": 1788089570.8152885,
+    "ast_hash": "0357fbf3d3bf491e87d2dc4eab4ff7e7",
+    "semantic_hash": "0357fbf3d3bf491e87d2dc4eab4ff7e7"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\client\\index.html": {
+    "mtime": 1788088561.993307,
+    "seen": 1788089570.8152907,
+    "ast_hash": "22e3ea3739c9353b03d643d0f35e5dad",
+    "semantic_hash": "22e3ea3739c9353b03d643d0f35e5dad"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\drive_inventory.md": {
+    "mtime": 1788088562.742482,
+    "seen": 1788089570.8152924,
+    "ast_hash": "bd5b83e5dca6ba585930c74c32a85fd9",
+    "semantic_hash": "bd5b83e5dca6ba585930c74c32a85fd9"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\ideas.md": {
+    "mtime": 1788088562.7484958,
+    "seen": 1788089570.8152945,
+    "ast_hash": "31ede49d27ca8b855f1f4f33ab29f83d",
+    "semantic_hash": "31ede49d27ca8b855f1f4f33ab29f83d"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\todo.md": {
+    "mtime": 1788088562.781579,
+    "seen": 1788089570.8152962,
+    "ast_hash": "f9bfb323590af57f68038ec9ea5b952e",
+    "semantic_hash": "f9bfb323590af57f68038ec9ea5b952e"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\images and vids\\image and vids\\file_00000000153c81faaf379f47e7226314.png": {
+    "mtime": 1788088884.1555278,
+    "seen": 1788089570.815298,
+    "ast_hash": "72f8a7d669f28bed5378d358b8c2cdd0",
+    "semantic_hash": "72f8a7d669f28bed5378d358b8c2cdd0"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\images and vids\\image and vids\\file_000000006ba881fa91f6cbde8e87f99d.png": {
+    "mtime": 1788088884.1082895,
+    "seen": 1788089570.8153,
+    "ast_hash": "576b70e4062ecd816a9cd987606dfaed",
+    "semantic_hash": "576b70e4062ecd816a9cd987606dfaed"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\images and vids\\image and vids\\file_00000000fae4820b8968c352a1346cc6.png": {
+    "mtime": 1788088884.1478305,
+    "seen": 1788089570.815302,
+    "ast_hash": "e2a8a228565e896d4d8a431e3288cab3",
+    "semantic_hash": "e2a8a228565e896d4d8a431e3288cab3"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\images and vids\\image and vids\\images (1).jpeg": {
+    "mtime": 1788088884.1280432,
+    "seen": 1788089570.8153036,
+    "ast_hash": "88ecb3c62c87ea39f831a37cc0f57ac8",
+    "semantic_hash": "88ecb3c62c87ea39f831a37cc0f57ac8"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\images and vids\\image and vids\\images (2).jpeg": {
+    "mtime": 1788088884.0766466,
+    "seen": 1788089570.8153057,
+    "ast_hash": "46fd75bf112189bfef5a10a80c75e18a",
+    "semantic_hash": "46fd75bf112189bfef5a10a80c75e18a"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\images and vids\\image and vids\\images (3).jpeg": {
+    "mtime": 1788088884.0925393,
+    "seen": 1788089570.8153076,
+    "ast_hash": "92591c6c3bf1e1c06a5e760af1bd85ec",
+    "semantic_hash": "92591c6c3bf1e1c06a5e760af1bd85ec"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\images and vids\\image and vids\\images.jpeg": {
+    "mtime": 1788088884.0606277,
+    "seen": 1788089570.8153117,
+    "ast_hash": "979e36ca4043ed754411941163fe0da7",
+    "semantic_hash": "979e36ca4043ed754411941163fe0da7"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\images and vids\\image and vids\\gemini_generated_video_7de79e44.mp4": {
+    "mtime": 1788088884.2826097,
+    "seen": 1788089570.8153133,
+    "ast_hash": "b2c364129c7d92a8b5b112614cb7cc76",
+    "semantic_hash": "b2c364129c7d92a8b5b112614cb7cc76"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\images and vids\\image and vids\\gemini_generated_video_bfe3a1ca.mp4": {
+    "mtime": 1788088884.2032626,
+    "seen": 1788089570.8153152,
+    "ast_hash": "17ac720f0b4de60eb9b7fac946a881e8",
+    "semantic_hash": "17ac720f0b4de60eb9b7fac946a881e8"
+  },
+  "E:\\ai\\claude\\ALAi\\agara-elevated-life\\images and vids\\image and vids\\gemini_generated_video_d55cb854.mp4": {
+    "mtime": 1788088884.2351944,
+    "seen": 1788089570.8153172,
+    "ast_hash": "d7e6dfa9424c458c372c11de677e5499",
+    "semantic_hash": "d7e6dfa9424c458c372c11de677e5499"
+  }
+}
