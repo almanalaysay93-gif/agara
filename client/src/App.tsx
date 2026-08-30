@@ -11,7 +11,7 @@ import NotFound from "./pages/NotFound";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={AnimatedScroll} />
+      <Route path="/" component={Home} />
       <Route path="/experience" component={AnimatedScroll} />
       <Route path="/home" component={Home} />
       <Route path="/404" component={NotFound} />
