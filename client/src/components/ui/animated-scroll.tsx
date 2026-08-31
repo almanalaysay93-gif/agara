@@ -24,10 +24,14 @@ type PageConfig = {
   accent: string;
 };
 
+const dualRitualVideo = "/media/ritual-video-dual.mp4?v=20260831b";
+const matchaVideo = "/media/ritual-video-matcha.mp4?v=20260831b";
+const coffeeVideo = "/media/ritual-video-coffee.mp4?v=20260831b";
+
 const pages: PageConfig[] = [
   {
     chapter: "01 — ELEVATE",
-    leftMedia: { type: "video", src: "/media/ritual-video-dual.mp4" },
+    leftMedia: { type: "video", src: dualRitualVideo },
     rightMedia: null,
     leftContent: null,
     rightContent: {
@@ -40,7 +44,7 @@ const pages: PageConfig[] = [
   {
     chapter: "02 — CLARITY",
     leftMedia: null,
-    rightMedia: { type: "video", src: "/media/ritual-video-matcha.mp4" },
+    rightMedia: { type: "video", src: matchaVideo },
     leftContent: {
       tag: "Matcha Blend",
       heading: "A Clearer Kind of Energy",
@@ -51,7 +55,7 @@ const pages: PageConfig[] = [
   },
   {
     chapter: "03 — GROUND",
-    leftMedia: { type: "video", src: "/media/ritual-video-coffee.mp4" },
+    leftMedia: { type: "video", src: coffeeVideo },
     rightMedia: null,
     leftContent: null,
     rightContent: {
@@ -75,7 +79,7 @@ const pages: PageConfig[] = [
   },
   {
     chapter: "05 — BEGIN",
-    leftMedia: { type: "video", src: "/media/ritual-video-dual.mp4" },
+    leftMedia: { type: "video", src: dualRitualVideo },
     rightMedia: null,
     leftContent: null,
     rightContent: {
@@ -127,8 +131,6 @@ const pages: PageConfig[] = [
 
 function VideoPane({ src, isActive }: { src: string; isActive: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [rect, setRect] = useState({ width: 16, height: 9 });
 
   useEffect(() => {
     const video = videoRef.current;
@@ -140,21 +142,20 @@ function VideoPane({ src, isActive }: { src: string; isActive: boolean }) {
     }
   }, [isActive]);
 
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-    const updateRect = () => {
-      const { width, height } = container.getBoundingClientRect();
-      if (width && height) setRect({ width, height });
-    };
-    updateRect();
-    const observer = new ResizeObserver(updateRect);
-    observer.observe(container);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div ref={containerRef} className="absolute inset-0 overflow-hidden bg-black">
+    <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-[#161c16]">
+      {/* Ambient background glow to create depth without cropping the foreground video */}
+      <video
+        src={src}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-35 blur-2xl scale-110"
+      />
+      {/* Main crisp video shown with object-contain so no text/packaging is cropped */}
       <video
         ref={videoRef}
         src={src}
@@ -164,20 +165,9 @@ function VideoPane({ src, isActive }: { src: string; isActive: boolean }) {
         playsInline
         preload="auto"
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ease-out"
+        className="relative z-10 max-h-full max-w-full w-full h-full object-contain p-3 sm:p-6 lg:p-8 transition-transform duration-1000 ease-out"
         style={{
-          transform: isActive ? "scale(1)" : "scale(1.06)",
-        }}
-      />
-      {/* Corner mask over the source watermark */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute bg-[radial-gradient(circle_at_100%_100%,_rgba(0,0,0,0.85)_0%,_rgba(0,0,0,0.55)_28%,_rgba(0,0,0,0)_65%)]"
-        style={{
-          left: rect.width * 0.62,
-          top: rect.height * 0.62,
-          width: rect.width * 0.38,
-          height: rect.height * 0.38,
+          transform: isActive ? "scale(1)" : "scale(0.98)",
         }}
       />
     </div>
@@ -219,7 +209,7 @@ function ContentPanel({
 
   return (
     <div
-      className="flex h-full w-full flex-col items-center justify-center p-6 sm:p-12 text-center select-none"
+      className="flex h-full w-full flex-col items-center justify-center p-4 sm:p-8 md:p-12 text-center select-none overflow-y-auto"
       style={{
         background: "var(--agara-cream)",
         color: "var(--agara-espresso)",
@@ -231,14 +221,14 @@ function ContentPanel({
             initial={reduceMotion ? false : { opacity: 0, y: -10 }}
             animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase border"
+            className="mb-2 sm:mb-4 inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold tracking-widest uppercase border"
             style={{
               borderColor: `${accent}35`,
               color: accent,
               background: `${accent}10`,
             }}
           >
-            <Sparkles size={13} />
+            <Sparkles size={12} />
             <span>{panel.tag}</span>
           </motion.div>
         ) : null}
@@ -247,7 +237,7 @@ function ContentPanel({
           initial={reduceMotion ? false : { opacity: 0, y: 24 }}
           animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-4 sm:mb-6 w-full text-3xl sm:text-5xl lg:text-6xl leading-[0.98] tracking-tight font-normal"
+          className="mb-2 sm:mb-4 md:mb-6 w-full text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight font-normal"
           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
         >
           {panel.heading}
@@ -257,7 +247,7 @@ function ContentPanel({
           initial={reduceMotion ? false : { opacity: 0, y: 18 }}
           animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-md text-base sm:text-lg lg:text-xl leading-relaxed"
+          className="w-full max-w-md text-xs sm:text-base md:text-lg lg:text-xl leading-relaxed"
           style={{ color: "var(--agara-olive)" }}
         >
           {panel.description}
@@ -404,9 +394,9 @@ export default function AnimatedScroll() {
             }}
             aria-hidden={!isActive}
           >
-            {/* Left Split Panel */}
+            {/* Desktop Left / Mobile Top Panel */}
             <div
-              className="absolute left-0 top-0 h-full w-full md:w-1/2 overflow-hidden shadow-2xl"
+              className="absolute left-0 top-0 h-1/2 md:h-full w-full md:w-1/2 overflow-hidden shadow-2xl"
               style={{
                 transform: leftTransform,
                 transition: reduceMotion
@@ -416,8 +406,9 @@ export default function AnimatedScroll() {
               }}
             >
               <div className="relative h-full w-full">
-                <MediaPane media={page.leftMedia} isActive={isActive} />
-                {page.leftContent ? (
+                {page.leftMedia ? (
+                  <MediaPane media={page.leftMedia} isActive={isActive} />
+                ) : page.leftContent ? (
                   <ContentPanel
                     panel={page.leftContent}
                     isActive={isActive}
@@ -427,9 +418,9 @@ export default function AnimatedScroll() {
               </div>
             </div>
 
-            {/* Right Split Panel */}
+            {/* Desktop Right / Mobile Bottom Panel */}
             <div
-              className="absolute right-0 top-0 h-full w-full md:w-1/2 overflow-hidden shadow-2xl hidden md:block"
+              className="absolute left-0 md:left-auto md:right-0 bottom-0 md:top-0 h-1/2 md:h-full w-full md:w-1/2 overflow-hidden shadow-2xl"
               style={{
                 transform: rightTransform,
                 transition: reduceMotion
@@ -439,8 +430,9 @@ export default function AnimatedScroll() {
               }}
             >
               <div className="relative h-full w-full">
-                <MediaPane media={page.rightMedia} isActive={isActive} />
-                {page.rightContent ? (
+                {page.rightMedia ? (
+                  <MediaPane media={page.rightMedia} isActive={isActive} />
+                ) : page.rightContent ? (
                   <ContentPanel
                     panel={page.rightContent}
                     isActive={isActive}

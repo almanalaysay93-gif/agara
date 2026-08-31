@@ -45,12 +45,12 @@ import {
 const heroImage = "/media/hero-packaging.webp";
 const matchaImage = "/media/ritual-matcha.webp";
 const coffeeImage = "/media/ritual-coffee.webp";
-const coffeeVideo = "/media/ritual-video-coffee.mp4";
-const lifestyleVideo = "/media/ritual-video-matcha.mp4";
-const dualRitualVideo = "/media/ritual-video-dual.mp4";
-const coffeePoster = "/media/poster-coffee.webp";
-const matchaPoster = "/media/poster-matcha.webp";
-const dualPoster = "/media/poster-dual.webp";
+const coffeeVideo = "/media/ritual-video-coffee.mp4?v=20260831b";
+const lifestyleVideo = "/media/ritual-video-matcha.mp4?v=20260831b";
+const dualRitualVideo = "/media/ritual-video-dual.mp4?v=20260831b";
+const coffeePoster = "/media/poster-coffee.webp?v=20260831b";
+const matchaPoster = "/media/poster-matcha.webp?v=20260831b";
+const dualPoster = "/media/poster-dual.webp?v=20260831b";
 const monogram = "/media/agara-monogram.svg";
 
 type ProductKey = "matcha" | "coffee";

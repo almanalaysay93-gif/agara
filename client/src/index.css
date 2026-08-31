@@ -672,15 +672,16 @@ h2 em {
   position: relative;
   margin: 0;
   overflow: hidden;
-  background: var(--agara-espresso);
+  background: #141b14;
+  border-radius: 6px;
 }
 .video-frame__media {
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
-  background: var(--agara-espresso);
+  object-fit: contain;
+  background: #141b14;
 }
 .video-frame__caption {
   position: absolute;
@@ -691,12 +692,13 @@ h2 em {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  padding: 17px 19px;
+  padding: 12px 18px;
   color: var(--agara-cream);
-  background: linear-gradient(0deg, rgba(20, 27, 21, 0.78), transparent);
+  background: linear-gradient(0deg, rgba(17, 22, 18, 0.6) 0%, transparent 100%);
   font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  pointer-events: none;
 }
 .video-frame__caption button {
   display: grid;
@@ -1333,11 +1335,11 @@ h2 em {
   height: 100%;
 }
 .closing-section__image > .closing-section__film .video-frame__media {
+  width: 100%;
   height: 100%;
   aspect-ratio: auto;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  filter: saturate(0.82);
 }
 .closing-section__stamp {
   position: absolute;
