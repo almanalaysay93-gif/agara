@@ -148,14 +148,22 @@ function VideoFrame({
   className?: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const figureRef = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
   const [isPlaying, setIsPlaying] = useState(true);
+  const inView = useInView(figureRef, { margin: "300px 0px 300px 0px" });
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video || !inView) return;
     video.play().catch(() => {});
-  }, []);
+  }, [inView]);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || inView) return;
+    video.pause();
+  }, [inView]);
 
   const togglePlayback = async () => {
     const video = videoRef.current;
@@ -170,16 +178,15 @@ function VideoFrame({
   };
 
   return (
-    <figure className={`video-frame ${className}`}>
+    <figure ref={figureRef} className={`video-frame ${className}`}>
       <video
         ref={videoRef}
         className="video-frame__media"
         poster={poster}
-        autoPlay
         muted
         loop
         playsInline
-        preload="auto"
+        preload={inView ? "auto" : "none"}
         aria-label={label}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
