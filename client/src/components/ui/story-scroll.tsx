@@ -135,9 +135,18 @@ const FlowArt: React.FC<FlowArtProps> = ({
         }
       });
 
+      // Multiple refresh checkpoints to ensure smooth layout transitions after assets load
       ScrollTrigger.refresh();
+      const t1 = setTimeout(() => ScrollTrigger.refresh(), 150);
+      const t2 = setTimeout(() => ScrollTrigger.refresh(), 500);
+
+      const handleResize = () => ScrollTrigger.refresh();
+      window.addEventListener('resize', handleResize);
 
       return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+        window.removeEventListener('resize', handleResize);
         triggers.forEach((t) => t.kill());
       };
     },
