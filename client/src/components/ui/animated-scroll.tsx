@@ -377,32 +377,35 @@ export default function AnimatedScroll() {
       {/* Main Split Panels */}
       {pages.map((page, i) => {
         const idx = i + 1;
-        const isActive = currentPage === idx;
+        const isCurrent = currentPage === idx;
         const isPast = currentPage > idx;
+        const isPrev = currentPage === idx + 1;
+        const isNext = currentPage === idx - 1;
+        const isVisible = isCurrent || isPrev || isNext;
 
-        // Fluid liquid transforms with depth scale
-        const leftTransform = isActive
-          ? "translate3d(0, 0, 0) scale(1)"
+        // Signature counter-sliding split curtains
+        const leftTransform = isCurrent
+          ? "translate3d(0, 0, 0)"
           : isPast
-          ? "translate3d(0, -100%, 0) scale(0.92)"
-          : "translate3d(0, 100%, 0) scale(0.92)";
+          ? "translate3d(0, -100%, 0)"
+          : "translate3d(0, 100%, 0)";
 
-        const rightTransform = isActive
-          ? "translate3d(0, 0, 0) scale(1)"
+        const rightTransform = isCurrent
+          ? "translate3d(0, 0, 0)"
           : isPast
-          ? "translate3d(0, 100%, 0) scale(0.92)"
-          : "translate3d(0, -100%, 0) scale(0.92)";
+          ? "translate3d(0, 100%, 0)"
+          : "translate3d(0, -100%, 0)";
 
         return (
           <div
             key={idx}
-            className="absolute inset-0 transition-opacity duration-700"
+            className="absolute inset-0"
             style={{
-              opacity: isActive ? 1 : 0,
-              pointerEvents: isActive ? "auto" : "none",
-              zIndex: isActive ? 10 : isPast ? 5 : 1,
+              pointerEvents: isCurrent ? "auto" : "none",
+              zIndex: isCurrent ? 10 : isPast ? 5 : 1,
+              visibility: isVisible ? "visible" : "hidden",
             }}
-            aria-hidden={!isActive}
+            aria-hidden={!isCurrent}
           >
             {/* Desktop Left / Mobile Top Panel */}
             <div
@@ -411,17 +414,17 @@ export default function AnimatedScroll() {
                 transform: leftTransform,
                 transition: reduceMotion
                   ? "none"
-                  : "transform 950ms cubic-bezier(0.16, 1, 0.3, 1), opacity 800ms ease-out",
+                  : "transform 950ms cubic-bezier(0.16, 1, 0.3, 1)",
                 willChange: "transform",
               }}
             >
               <div className="relative h-full w-full">
                 {page.leftMedia ? (
-                  <MediaPane media={page.leftMedia} isActive={isActive} />
+                  <MediaPane media={page.leftMedia} isActive={isCurrent} />
                 ) : page.leftContent ? (
                   <ContentPanel
                     panel={page.leftContent}
-                    isActive={isActive}
+                    isActive={isCurrent}
                     accent={page.accent}
                   />
                 ) : null}
@@ -435,17 +438,17 @@ export default function AnimatedScroll() {
                 transform: rightTransform,
                 transition: reduceMotion
                   ? "none"
-                  : "transform 950ms cubic-bezier(0.16, 1, 0.3, 1), opacity 800ms ease-out",
+                  : "transform 950ms cubic-bezier(0.16, 1, 0.3, 1)",
                 willChange: "transform",
               }}
             >
               <div className="relative h-full w-full">
                 {page.rightMedia ? (
-                  <MediaPane media={page.rightMedia} isActive={isActive} />
+                  <MediaPane media={page.rightMedia} isActive={isCurrent} />
                 ) : page.rightContent ? (
                   <ContentPanel
                     panel={page.rightContent}
-                    isActive={isActive}
+                    isActive={isCurrent}
                     accent={page.accent}
                   />
                 ) : null}
