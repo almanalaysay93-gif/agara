@@ -4,18 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ArrowDown, ArrowUp, ArrowUpRight, Sparkles } from "lucide-react";
 
-const SOURCE_ASPECT = 1280 / 720;
-
-function getContainRect(containerWidth: number, containerHeight: number) {
-  const containerAspect = containerWidth / containerHeight;
-  if (containerAspect > SOURCE_ASPECT) {
-    const width = containerHeight * SOURCE_ASPECT;
-    return { width, height: containerHeight, x: (containerWidth - width) / 2, y: 0 };
-  }
-  const height = containerWidth / SOURCE_ASPECT;
-  return { width: containerWidth, height, x: 0, y: (containerHeight - height) / 2 };
-}
-
 type PagePanel = {
   tag?: string;
   heading: string;
@@ -140,7 +128,7 @@ const pages: PageConfig[] = [
 function VideoPane({ src, isActive }: { src: string; isActive: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [containRect, setContainRect] = useState(() => getContainRect(16, 9));
+  const [rect, setRect] = useState({ width: 16, height: 9 });
 
   useEffect(() => {
     const video = videoRef.current;
@@ -157,7 +145,7 @@ function VideoPane({ src, isActive }: { src: string; isActive: boolean }) {
     if (!container) return;
     const updateRect = () => {
       const { width, height } = container.getBoundingClientRect();
-      if (width && height) setContainRect(getContainRect(width, height));
+      if (width && height) setRect({ width, height });
     };
     updateRect();
     const observer = new ResizeObserver(updateRect);
@@ -176,7 +164,7 @@ function VideoPane({ src, isActive }: { src: string; isActive: boolean }) {
         playsInline
         preload="auto"
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-contain transition-transform duration-1000 ease-out"
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ease-out"
         style={{
           transform: isActive ? "scale(1)" : "scale(1.06)",
         }}
@@ -186,10 +174,10 @@ function VideoPane({ src, isActive }: { src: string; isActive: boolean }) {
         aria-hidden="true"
         className="pointer-events-none absolute bg-[radial-gradient(circle_at_100%_100%,_rgba(0,0,0,0.85)_0%,_rgba(0,0,0,0.55)_28%,_rgba(0,0,0,0)_65%)]"
         style={{
-          left: containRect.x + containRect.width * 0.62,
-          top: containRect.y + containRect.height * 0.62,
-          width: containRect.width * 0.38,
-          height: containRect.height * 0.38,
+          left: rect.width * 0.62,
+          top: rect.height * 0.62,
+          width: rect.width * 0.38,
+          height: rect.height * 0.38,
         }}
       />
     </div>
