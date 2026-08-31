@@ -679,7 +679,7 @@ h2 em {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
-  object-fit: contain;
+  object-fit: cover;
   background: var(--agara-espresso);
 }
 .video-frame__caption {
@@ -1335,7 +1335,7 @@ h2 em {
 .closing-section__image > .closing-section__film .video-frame__media {
   height: 100%;
   aspect-ratio: auto;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   filter: saturate(0.82);
 }
