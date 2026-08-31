@@ -144,8 +144,9 @@ function VideoPane({ src, isActive }: { src: string; isActive: boolean }) {
 
   return (
     <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-[#161c16]">
-      {/* Ambient background glow to create depth without cropping the foreground video */}
+      {/* Background ambient texture */}
       <video
+        key={`ambient-${src}`}
         src={src}
         autoPlay
         muted
@@ -155,8 +156,9 @@ function VideoPane({ src, isActive }: { src: string; isActive: boolean }) {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-35 blur-2xl scale-110"
       />
-      {/* Main crisp video shown with object-contain so no text/packaging is cropped */}
+      {/* Main uncropped video */}
       <video
+        key={`main-${src}`}
         ref={videoRef}
         src={src}
         autoPlay
@@ -165,7 +167,7 @@ function VideoPane({ src, isActive }: { src: string; isActive: boolean }) {
         playsInline
         preload="auto"
         aria-hidden="true"
-        className="relative z-10 max-h-full max-w-full w-full h-full object-contain p-3 sm:p-6 lg:p-8 transition-transform duration-1000 ease-out"
+        className="relative z-10 max-h-full max-w-full w-full h-full object-contain p-2 sm:p-4 lg:p-6 transition-transform duration-1000 ease-out"
         style={{
           transform: isActive ? "scale(1)" : "scale(0.98)",
         }}
@@ -185,14 +187,22 @@ function MediaPane({
   if (media.type === "video")
     return <VideoPane src={media.src} isActive={isActive} />;
   return (
-    <div
-      className="absolute inset-0 bg-contain bg-center bg-no-repeat transition-transform duration-1000 ease-out"
-      style={{
-        backgroundImage: `url(${media.src})`,
-        backgroundColor: "var(--agara-cream)",
-        transform: isActive ? "scale(1)" : "scale(1.04)",
-      }}
-    />
+    <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-[#161c16]">
+      {/* Ambient background image blur */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-30 blur-2xl scale-110"
+        style={{ backgroundImage: `url(${media.src})` }}
+      />
+      {/* Main crisp uncropped image */}
+      <img
+        src={media.src}
+        alt="Agara Visual Experience"
+        className="relative z-10 max-h-full max-w-full w-full h-full object-contain p-2 sm:p-4 lg:p-6 transition-transform duration-1000 ease-out"
+        style={{
+          transform: isActive ? "scale(1)" : "scale(0.98)",
+        }}
+      />
+    </div>
   );
 }
 
@@ -209,19 +219,19 @@ function ContentPanel({
 
   return (
     <div
-      className="flex h-full w-full flex-col items-center justify-center p-4 sm:p-8 md:p-12 text-center select-none overflow-y-auto"
+      className="flex h-full w-full flex-col items-center justify-center px-6 sm:px-10 md:px-14 py-12 text-center select-none overflow-y-auto"
       style={{
         background: "var(--agara-cream)",
         color: "var(--agara-espresso)",
       }}
     >
-      <div className="max-w-xl mx-auto flex flex-col items-center">
+      <div className="w-full max-w-lg mx-auto flex flex-col items-center">
         {panel.tag ? (
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, y: -10 }}
             animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-2 sm:mb-4 inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold tracking-widest uppercase border"
+            className="mb-3 sm:mb-4 inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold tracking-widest uppercase border"
             style={{
               borderColor: `${accent}35`,
               color: accent,
@@ -237,7 +247,7 @@ function ContentPanel({
           initial={reduceMotion ? false : { opacity: 0, y: 24 }}
           animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-2 sm:mb-4 md:mb-6 w-full text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight font-normal"
+          className="mb-3 sm:mb-5 w-full text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-tight font-normal text-balance"
           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
         >
           {panel.heading}
@@ -247,7 +257,7 @@ function ContentPanel({
           initial={reduceMotion ? false : { opacity: 0, y: 18 }}
           animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-md text-xs sm:text-base md:text-lg lg:text-xl leading-relaxed"
+          className="w-full max-w-md text-xs sm:text-sm md:text-base leading-relaxed"
           style={{ color: "var(--agara-olive)" }}
         >
           {panel.description}
