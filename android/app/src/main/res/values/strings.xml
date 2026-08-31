@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Agara</string>
+    <string name="title_activity_main">Agara</string>
+    <string name="package_name">com.agara.elevatedlife</string>
+    <string name="custom_url_scheme">com.agara.elevatedlife</string>
+</resources>
